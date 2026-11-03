@@ -15,17 +15,17 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
-    expect(find.text('Kelimeler'), findsOneWidget);
-    expect(find.text('Cümleler'), findsOneWidget);
+    expect(find.text('Words'), findsOneWidget);
+    expect(find.text('Sentences'), findsOneWidget);
     expect(find.text('Quiz'), findsOneWidget);
-    expect(find.text('Karışık Test'), findsOneWidget);
+    expect(find.text('Mixed Test'), findsOneWidget);
   });
 
-  testWidgets('Cümleler butonu grup seçme ekranını açar',
+  testWidgets('Sentences butonu grup seçme ekranını açar',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
-    await tester.tap(find.text('Cümleler'));
+    await tester.tap(find.text('Sentences'));
     // Yükleme göstergesi sürekli döndüğü için pumpAndSettle kullanılmıyor.
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
@@ -44,11 +44,11 @@ void main() {
     expect(find.byType(CategoryScreen), findsOneWidget);
   });
 
-  testWidgets('Karışık Test butonu quiz ekranını açar',
+  testWidgets('Mixed Test butonu quiz ekranını açar',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
-    await tester.tap(find.text('Karışık Test'));
+    await tester.tap(find.text('Mixed Test'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
 

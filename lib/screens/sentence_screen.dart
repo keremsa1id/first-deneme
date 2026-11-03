@@ -20,7 +20,7 @@ class SentenceScreen extends StatefulWidget {
     super.key,
     this.repository = const WordRepository(),
     this.category,
-    this.title = 'Cümleler',
+    this.title = 'Sentences',
   });
 
   final WordRepository repository;

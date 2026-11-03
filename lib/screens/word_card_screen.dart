@@ -21,7 +21,7 @@ class WordCardScreen extends StatefulWidget {
     super.key,
     this.repository = const WordRepository(),
     this.category,
-    this.title = 'Kelimeler',
+    this.title = 'Words',
   });
 
   final WordRepository repository;

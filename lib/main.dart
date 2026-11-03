@@ -17,7 +17,7 @@ class KelimeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Kelime Oyunu',
+      title: 'Word Game',
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: Colors.orange,
@@ -36,8 +36,8 @@ class KelimeApp extends StatelessWidget {
   }
 }
 
-/// Ana menü. Kelimeler, Cümleler ve Quiz önce grup seçtirir;
-/// Karışık Test bütün gruplardan soru sorar.
+/// Ana menü. Words, Sentences ve Quiz önce grup seçtirir;
+/// Mixed Test bütün gruplardan soru sorar.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  'Kelime Oyunu',
+                  'Word Game',
                   textAlign: TextAlign.center,
                   style: theme.textTheme.displayLarge?.copyWith(
                     color: theme.colorScheme.primary,
@@ -70,12 +70,12 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 48),
                 _MenuButton(
-                  label: 'Kelimeler',
+                  label: 'Words',
                   icon: Icons.abc,
                   onPressed: () => _open(
                     context,
                     CategoryScreen(
-                      title: 'Kelimeler',
+                      title: 'Words',
                       builder: (WordCategory category) => WordCardScreen(
                         category: category.id,
                         title: category.name,
@@ -85,12 +85,12 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 _MenuButton(
-                  label: 'Cümleler',
+                  label: 'Sentences',
                   icon: Icons.chat_bubble,
                   onPressed: () => _open(
                     context,
                     CategoryScreen(
-                      title: 'Cümleler',
+                      title: 'Sentences',
                       builder: (WordCategory category) => SentenceScreen(
                         category: category.id,
                         title: category.name,
@@ -117,12 +117,12 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 _MenuButton(
-                  label: 'Karışık Test',
+                  label: 'Mixed Test',
                   icon: Icons.shuffle_rounded,
                   onPressed: () => _open(
                     context,
                     const QuizScreen(
-                      title: 'Karışık Test',
+                      title: 'Mixed Test',
                       questionCount: 15,
                       mixCategories: true,
                     ),
