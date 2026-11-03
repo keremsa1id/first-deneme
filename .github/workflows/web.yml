@@ -1,0 +1,57 @@
+name: Web Yayını
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Aynı anda tek yayın: yeni push gelirse eskisi iptal edilir.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      - name: Flutter kur
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Web platform dosyalarını oluştur
+        run: flutter create . --platforms=web --project-name kelime_macerasi
+
+      - name: Paketleri indir
+        run: flutter pub get
+
+      - name: Web sürümünü derle
+        # Site https://<kullanıcı>.github.io/<repo>/ adresinde açılır.
+        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
+
+      - name: Pages için yükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: GitHub Pages'e yayınla
+        id: deployment
+        uses: actions/deploy-pages@v4

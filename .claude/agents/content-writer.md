@@ -19,6 +19,7 @@ Sen 4-8 yaş arası Türk çocuklarına İngilizce öğreten bir içerik yazarı
 - `category`: kategori adı, İngilizce ve küçük harfle (örn. `animals`)
 - `imagePath`: `assets/images/<category>/<english>.png`
 - `exampleSentence`: kelimeyi içeren basit İngilizce cümle, **en fazla 6 kelime**
+- `emoji`: kelimeyi anlatan tek bir emoji (görsel dosyası yoksa kartta bu gösterilir)
 
 ## Örnek format
 ```json
@@ -28,7 +29,8 @@ Sen 4-8 yaş arası Türk çocuklarına İngilizce öğreten bir içerik yazarı
     "turkish": "kedi",
     "category": "animals",
     "imagePath": "assets/images/animals/cat.png",
-    "exampleSentence": "The cat is sleeping."
+    "exampleSentence": "The cat is sleeping.",
+    "emoji": "🐱"
   }
 ]
 ```

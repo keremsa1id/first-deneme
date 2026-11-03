@@ -4,139 +4,351 @@
     "turkish": "kedi",
     "category": "animals",
     "imagePath": "assets/images/animals/cat.png",
-    "exampleSentence": "The cat is sleeping."
+    "exampleSentence": "The cat is sleeping.",
+    "emoji": "🐱"
   },
   {
     "english": "dog",
     "turkish": "köpek",
     "category": "animals",
     "imagePath": "assets/images/animals/dog.png",
-    "exampleSentence": "My dog likes to play."
+    "exampleSentence": "My dog likes to play.",
+    "emoji": "🐶"
   },
   {
     "english": "bird",
     "turkish": "kuş",
     "category": "animals",
     "imagePath": "assets/images/animals/bird.png",
-    "exampleSentence": "The bird can fly."
+    "exampleSentence": "The bird can fly.",
+    "emoji": "🐦"
   },
   {
     "english": "fish",
     "turkish": "balık",
     "category": "animals",
     "imagePath": "assets/images/animals/fish.png",
-    "exampleSentence": "The fish swims fast."
+    "exampleSentence": "The fish swims fast.",
+    "emoji": "🐟"
   },
   {
     "english": "horse",
     "turkish": "at",
     "category": "animals",
     "imagePath": "assets/images/animals/horse.png",
-    "exampleSentence": "The horse is very big."
+    "exampleSentence": "The horse is very big.",
+    "emoji": "🐴"
   },
   {
     "english": "cow",
     "turkish": "inek",
     "category": "animals",
     "imagePath": "assets/images/animals/cow.png",
-    "exampleSentence": "The cow gives us milk."
+    "exampleSentence": "The cow gives us milk.",
+    "emoji": "🐮"
   },
   {
     "english": "sheep",
     "turkish": "koyun",
     "category": "animals",
     "imagePath": "assets/images/animals/sheep.png",
-    "exampleSentence": "The sheep is white."
+    "exampleSentence": "The sheep is white.",
+    "emoji": "🐑"
   },
   {
     "english": "duck",
     "turkish": "ördek",
     "category": "animals",
     "imagePath": "assets/images/animals/duck.png",
-    "exampleSentence": "The duck says quack."
+    "exampleSentence": "The duck says quack.",
+    "emoji": "🦆"
   },
   {
     "english": "rabbit",
     "turkish": "tavşan",
     "category": "animals",
     "imagePath": "assets/images/animals/rabbit.png",
-    "exampleSentence": "The rabbit eats a carrot."
+    "exampleSentence": "The rabbit eats a carrot.",
+    "emoji": "🐰"
   },
   {
     "english": "frog",
     "turkish": "kurbağa",
     "category": "animals",
     "imagePath": "assets/images/animals/frog.png",
-    "exampleSentence": "The frog is green."
+    "exampleSentence": "The frog is green.",
+    "emoji": "🐸"
   },
   {
     "english": "elephant",
     "turkish": "fil",
     "category": "animals",
     "imagePath": "assets/images/animals/elephant.png",
-    "exampleSentence": "The elephant has big ears."
+    "exampleSentence": "The elephant has big ears.",
+    "emoji": "🐘"
   },
   {
     "english": "lion",
     "turkish": "aslan",
     "category": "animals",
     "imagePath": "assets/images/animals/lion.png",
-    "exampleSentence": "The lion is yellow."
+    "exampleSentence": "The lion is yellow.",
+    "emoji": "🦁"
   },
   {
     "english": "monkey",
     "turkish": "maymun",
     "category": "animals",
     "imagePath": "assets/images/animals/monkey.png",
-    "exampleSentence": "The monkey likes bananas."
+    "exampleSentence": "The monkey likes bananas.",
+    "emoji": "🐵"
   },
   {
     "english": "bear",
     "turkish": "ayı",
     "category": "animals",
     "imagePath": "assets/images/animals/bear.png",
-    "exampleSentence": "The bear loves honey."
+    "exampleSentence": "The bear loves honey.",
+    "emoji": "🐻"
   },
   {
     "english": "giraffe",
     "turkish": "zürafa",
     "category": "animals",
     "imagePath": "assets/images/animals/giraffe.png",
-    "exampleSentence": "The giraffe is very tall."
+    "exampleSentence": "The giraffe is very tall.",
+    "emoji": "🦒"
   },
   {
     "english": "chicken",
     "turkish": "tavuk",
     "category": "animals",
     "imagePath": "assets/images/animals/chicken.png",
-    "exampleSentence": "The chicken lays an egg."
+    "exampleSentence": "The chicken lays an egg.",
+    "emoji": "🐔"
   },
   {
     "english": "pig",
     "turkish": "domuz",
     "category": "animals",
     "imagePath": "assets/images/animals/pig.png",
-    "exampleSentence": "The pig is pink."
+    "exampleSentence": "The pig is pink.",
+    "emoji": "🐷"
   },
   {
     "english": "turtle",
     "turkish": "kaplumbağa",
     "category": "animals",
     "imagePath": "assets/images/animals/turtle.png",
-    "exampleSentence": "The turtle walks slowly."
+    "exampleSentence": "The turtle walks slowly.",
+    "emoji": "🐢"
   },
   {
     "english": "butterfly",
     "turkish": "kelebek",
     "category": "animals",
     "imagePath": "assets/images/animals/butterfly.png",
-    "exampleSentence": "The butterfly is beautiful."
+    "exampleSentence": "The butterfly is beautiful.",
+    "emoji": "🦋"
   },
   {
     "english": "penguin",
     "turkish": "penguen",
     "category": "animals",
     "imagePath": "assets/images/animals/penguin.png",
-    "exampleSentence": "The penguin lives on ice."
+    "exampleSentence": "The penguin lives on ice.",
+    "emoji": "🐧"
+  },
+  {
+    "english": "cup",
+    "turkish": "fincan",
+    "category": "objects",
+    "imagePath": "assets/images/objects/cup.png",
+    "exampleSentence": "I drink milk from a cup.",
+    "emoji": "☕"
+  },
+  {
+    "english": "spoon",
+    "turkish": "kaşık",
+    "category": "objects",
+    "imagePath": "assets/images/objects/spoon.png",
+    "exampleSentence": "I eat soup with a spoon.",
+    "emoji": "🥄"
+  },
+  {
+    "english": "fork",
+    "turkish": "çatal",
+    "category": "objects",
+    "imagePath": "assets/images/objects/fork.png",
+    "exampleSentence": "Take a fork, please.",
+    "emoji": "🍴"
+  },
+  {
+    "english": "plate",
+    "turkish": "tabak",
+    "category": "objects",
+    "imagePath": "assets/images/objects/plate.png",
+    "exampleSentence": "My plate is empty.",
+    "emoji": "🍽️"
+  },
+  {
+    "english": "chair",
+    "turkish": "sandalye",
+    "category": "objects",
+    "imagePath": "assets/images/objects/chair.png",
+    "exampleSentence": "Sit on the chair.",
+    "emoji": "🪑"
+  },
+  {
+    "english": "bed",
+    "turkish": "yatak",
+    "category": "objects",
+    "imagePath": "assets/images/objects/bed.png",
+    "exampleSentence": "I sleep in my bed.",
+    "emoji": "🛏️"
+  },
+  {
+    "english": "door",
+    "turkish": "kapı",
+    "category": "objects",
+    "imagePath": "assets/images/objects/door.png",
+    "exampleSentence": "Please open the door.",
+    "emoji": "🚪"
+  },
+  {
+    "english": "window",
+    "turkish": "pencere",
+    "category": "objects",
+    "imagePath": "assets/images/objects/window.png",
+    "exampleSentence": "Look out the window.",
+    "emoji": "🪟"
+  },
+  {
+    "english": "clock",
+    "turkish": "saat",
+    "category": "objects",
+    "imagePath": "assets/images/objects/clock.png",
+    "exampleSentence": "The clock says eight.",
+    "emoji": "⏰"
+  },
+  {
+    "english": "key",
+    "turkish": "anahtar",
+    "category": "objects",
+    "imagePath": "assets/images/objects/key.png",
+    "exampleSentence": "Mom has the key.",
+    "emoji": "🔑"
+  },
+  {
+    "english": "book",
+    "turkish": "kitap",
+    "category": "objects",
+    "imagePath": "assets/images/objects/book.png",
+    "exampleSentence": "I read a book.",
+    "emoji": "📖"
+  },
+  {
+    "english": "pencil",
+    "turkish": "kalem",
+    "category": "objects",
+    "imagePath": "assets/images/objects/pencil.png",
+    "exampleSentence": "I draw with a pencil.",
+    "emoji": "✏️"
+  },
+  {
+    "english": "bag",
+    "turkish": "çanta",
+    "category": "objects",
+    "imagePath": "assets/images/objects/bag.png",
+    "exampleSentence": "My bag is blue.",
+    "emoji": "🎒"
+  },
+  {
+    "english": "phone",
+    "turkish": "telefon",
+    "category": "objects",
+    "imagePath": "assets/images/objects/phone.png",
+    "exampleSentence": "Dad is on the phone.",
+    "emoji": "📱"
+  },
+  {
+    "english": "television",
+    "turkish": "televizyon",
+    "category": "objects",
+    "imagePath": "assets/images/objects/television.png",
+    "exampleSentence": "We watch television together.",
+    "emoji": "📺"
+  },
+  {
+    "english": "toothbrush",
+    "turkish": "diş fırçası",
+    "category": "objects",
+    "imagePath": "assets/images/objects/toothbrush.png",
+    "exampleSentence": "I use my toothbrush.",
+    "emoji": "🪥"
+  },
+  {
+    "english": "soap",
+    "turkish": "sabun",
+    "category": "objects",
+    "imagePath": "assets/images/objects/soap.png",
+    "exampleSentence": "Wash your hands with soap.",
+    "emoji": "🧼"
+  },
+  {
+    "english": "umbrella",
+    "turkish": "şemsiye",
+    "category": "objects",
+    "imagePath": "assets/images/objects/umbrella.png",
+    "exampleSentence": "Take your umbrella, it rains.",
+    "emoji": "☂️"
+  },
+  {
+    "english": "shoe",
+    "turkish": "ayakkabı",
+    "category": "objects",
+    "imagePath": "assets/images/objects/shoe.png",
+    "exampleSentence": "Put on your shoe.",
+    "emoji": "👟"
+  },
+  {
+    "english": "sock",
+    "turkish": "çorap",
+    "category": "objects",
+    "imagePath": "assets/images/objects/sock.png",
+    "exampleSentence": "I have one red sock.",
+    "emoji": "🧦"
+  },
+  {
+    "english": "hat",
+    "turkish": "şapka",
+    "category": "objects",
+    "imagePath": "assets/images/objects/hat.png",
+    "exampleSentence": "I like my new hat.",
+    "emoji": "🧢"
+  },
+  {
+    "english": "glasses",
+    "turkish": "gözlük",
+    "category": "objects",
+    "imagePath": "assets/images/objects/glasses.png",
+    "exampleSentence": "Grandpa wears glasses.",
+    "emoji": "👓"
+  },
+  {
+    "english": "basket",
+    "turkish": "sepet",
+    "category": "objects",
+    "imagePath": "assets/images/objects/basket.png",
+    "exampleSentence": "The apples are in the basket.",
+    "emoji": "🧺"
+  },
+  {
+    "english": "broom",
+    "turkish": "süpürge",
+    "category": "objects",
+    "imagePath": "assets/images/objects/broom.png",
+    "exampleSentence": "Clean the floor with a broom.",
+    "emoji": "🧹"
   }
 ]
