@@ -13,7 +13,7 @@ class WordCategory {
 
   final String id;
 
-  /// Ekranda gösterilen Türkçe ad.
+  /// Ekranda gösterilen İngilizce ad.
   final String name;
   final String emoji;
   final Color color;
@@ -35,91 +35,91 @@ class WordCategory {
 const List<WordCategory> wordCategories = <WordCategory>[
   WordCategory(
     id: 'animals',
-    name: 'Hayvanlar',
+    name: 'Animals',
     emoji: '🐾',
     color: Color(0xFF81C784),
   ),
   WordCategory(
     id: 'colors',
-    name: 'Renkler',
+    name: 'Colors',
     emoji: '🎨',
     color: Color(0xFFF06292),
   ),
   WordCategory(
     id: 'numbers',
-    name: 'Sayılar',
+    name: 'Numbers',
     emoji: '🔢',
     color: Color(0xFF4FC3F7),
   ),
   WordCategory(
     id: 'fruits',
-    name: 'Meyveler',
+    name: 'Fruits',
     emoji: '🍎',
     color: Color(0xFFFF8A65),
   ),
   WordCategory(
     id: 'food',
-    name: 'Yiyecekler',
+    name: 'Food',
     emoji: '🍞',
     color: Color(0xFFFFB74D),
   ),
   WordCategory(
     id: 'family',
-    name: 'Ailem',
+    name: 'Family',
     emoji: '👨‍👩‍👧',
     color: Color(0xFFBA68C8),
   ),
   WordCategory(
     id: 'body',
-    name: 'Vücudumuz',
+    name: 'Body',
     emoji: '✋',
     color: Color(0xFFF48FB1),
   ),
   WordCategory(
     id: 'clothes',
-    name: 'Kıyafetler',
+    name: 'Clothes',
     emoji: '👕',
     color: Color(0xFF7986CB),
   ),
   WordCategory(
     id: 'toys',
-    name: 'Oyuncaklar',
+    name: 'Toys',
     emoji: '🧸',
     color: Color(0xFFFFD54F),
   ),
   WordCategory(
     id: 'home',
-    name: 'Evimiz',
+    name: 'Home',
     emoji: '🏠',
     color: Color(0xFFA1887F),
   ),
   WordCategory(
     id: 'kitchen',
-    name: 'Mutfak',
+    name: 'Kitchen',
     emoji: '🍽️',
     color: Color(0xFFFF8A65),
   ),
   WordCategory(
     id: 'bathroom',
-    name: 'Banyo',
+    name: 'Bathroom',
     emoji: '🛁',
     color: Color(0xFF4DD0E1),
   ),
   WordCategory(
     id: 'school',
-    name: 'Okul',
+    name: 'School',
     emoji: '🎒',
     color: Color(0xFF4DB6AC),
   ),
   WordCategory(
     id: 'vehicles',
-    name: 'Taşıtlar',
+    name: 'Vehicles',
     emoji: '🚗',
     color: Color(0xFFE57373),
   ),
   WordCategory(
     id: 'nature',
-    name: 'Doğa',
+    name: 'Nature',
     emoji: '🌳',
     color: Color(0xFF9CCC65),
   ),

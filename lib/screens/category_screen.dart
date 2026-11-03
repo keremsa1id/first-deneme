@@ -201,7 +201,7 @@ class _CategoryTile extends StatelessWidget {
                 ),
               ),
               Text(
-                '$wordCount kelime',
+                '$wordCount words',
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,
                 ),
