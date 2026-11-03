@@ -11,11 +11,9 @@ import '../widgets/word_picture.dart';
 
 /// Kelimeleri tek tek büyük kartlar halinde gösteren ekran.
 ///
-/// Kaydırma yönü: Parmağı SAĞA doğru kaydırınca SONRAKİ kelime gelir.
-/// Varsayılan PageView'da sonraki sayfa parmağı sola kaydırınca gelir; bu
-/// yüzden PageView `reverse: true` ile kullanılıyor. Böylece sonraki kart
-/// soldan içeri girer ve sağa doğru kaydırma hareketi bir sonraki kelimeyi
-/// açar. Alttaki ileri/geri butonlarıyla da geçilebilir. Son kelimede
+/// Kaydırma yönü: Parmağı SOLA doğru kaydırınca SONRAKİ kelime gelir;
+/// eski kart sola çıkar, yenisi sağdan girer (PageView'ın varsayılanı).
+/// Alttaki ileri/geri butonlarıyla da geçilebilir. Son kelimede
 /// durulur ve ileri butonu yerine "Başa dön" butonu gösterilir.
 class WordCardScreen extends StatefulWidget {
   const WordCardScreen({
@@ -161,8 +159,6 @@ class _WordCardScreenState extends State<WordCardScreen> {
             ),
             child: PageView.builder(
               controller: _pageController,
-              // Sağa kaydırınca sonraki kelime gelsin diye ters çevrildi.
-              reverse: true,
               itemCount: words.length,
               onPageChanged: (int index) {
                 setState(() => _currentIndex = index);

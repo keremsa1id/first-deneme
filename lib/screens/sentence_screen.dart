@@ -11,8 +11,8 @@ import '../widgets/word_picture.dart';
 
 /// Kelimelerin örnek cümlelerini tek tek büyük kartlar halinde gösteren ekran.
 ///
-/// Gezinme [WordCardScreen] ile aynıdır: parmağı SAĞA kaydırınca SONRAKİ
-/// cümle gelir (`reverse: true`), alttaki butonlarla da geçilebilir.
+/// Gezinme [WordCardScreen] ile aynıdır: parmağı SOLA kaydırınca SONRAKİ
+/// cümle gelir (eski kart sola çıkar), alttaki butonlarla da geçilebilir.
 /// Cümlede öğrenilen kelime renkli ve kalın gösterilir.
 class SentenceScreen extends StatefulWidget {
   const SentenceScreen({
@@ -158,8 +158,6 @@ class _SentenceScreenState extends State<SentenceScreen> {
             ),
             child: PageView.builder(
               controller: _pageController,
-              // Sağa kaydırınca sonraki cümle gelsin diye ters çevrildi.
-              reverse: true,
               itemCount: words.length,
               onPageChanged: (int index) {
                 setState(() => _currentIndex = index);
