@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart' show PointerDeviceKind;
 import 'package:flutter/material.dart';
 
 import '../models/word.dart';
@@ -10,7 +11,8 @@ import '../services/word_repository.dart';
 /// Varsayılan PageView'da sonraki sayfa parmağı sola kaydırınca gelir; bu
 /// yüzden PageView `reverse: true` ile kullanılıyor. Böylece sonraki kart
 /// soldan içeri girer ve sağa doğru kaydırma hareketi bir sonraki kelimeyi
-/// açar. Son kelimede durulur ve "Başa dön" butonu gösterilir.
+/// açar. Alttaki ileri/geri butonlarıyla da geçilebilir. Son kelimede
+/// durulur ve ileri butonu yerine "Başa dön" butonu gösterilir.
 class WordCardScreen extends StatefulWidget {
   const WordCardScreen({
     super.key,
@@ -52,6 +54,20 @@ class _WordCardScreenState extends State<WordCardScreen> {
     _pageController.animateToPage(
       0,
       duration: const Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void _goToNext() {
+    _pageController.nextPage(
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void _goToPrevious() {
+    _pageController.previousPage(
+      duration: const Duration(milliseconds: 400),
       curve: Curves.easeInOut,
     );
   }
@@ -123,66 +139,71 @@ class _WordCardScreenState extends State<WordCardScreen> {
 
   Widget _buildCards(BuildContext context, List<Word> words) {
     final ThemeData theme = Theme.of(context);
+    final bool isFirst = _currentIndex == 0;
     final bool isLast = _currentIndex >= words.length - 1;
 
     return Column(
       children: [
         Expanded(
-          child: PageView.builder(
-            controller: _pageController,
-            // Sağa kaydırınca sonraki kelime gelsin diye ters çevrildi.
-            reverse: true,
-            itemCount: words.length,
-            onPageChanged: (int index) {
-              setState(() => _currentIndex = index);
-            },
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
-                child: _WordCard(word: words[index]),
-              );
-            },
+          // Web'de fareyle sürükleyerek de kart geçilebilsin.
+          child: ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              dragDevices: <PointerDeviceKind>{
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+                PointerDeviceKind.stylus,
+                PointerDeviceKind.trackpad,
+              },
+            ),
+            child: PageView.builder(
+              controller: _pageController,
+              // Sağa kaydırınca sonraki kelime gelsin diye ters çevrildi.
+              reverse: true,
+              itemCount: words.length,
+              onPageChanged: (int index) {
+                setState(() => _currentIndex = index);
+              },
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
+                  child: _WordCard(word: words[index]),
+                );
+              },
+            ),
           ),
         ),
+        // Alt çubuk: geri, sayaç, ileri. Son kelimede ileri yerine başa dön.
         Padding(
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-          child: SizedBox(
-            height: 72,
-            child: isLast && words.length > 1
-                ? FilledButton.icon(
-                    onPressed: _goToFirst,
-                    icon: const Icon(Icons.replay_rounded, size: 36),
-                    label: const Text('Başa dön'),
-                    style: FilledButton.styleFrom(
-                      minimumSize: const Size.fromHeight(72),
-                      textStyle: const TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(24),
-                      ),
-                    ),
-                  )
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '${_currentIndex + 1} / ${words.length}',
-                        style: theme.textTheme.titleLarge?.copyWith(
-                          color: theme.colorScheme.onSurfaceVariant,
-                        ),
-                      ),
-                      if (words.length > 1) ...[
-                        const SizedBox(width: 16),
-                        Icon(
-                          Icons.swipe_right_rounded,
-                          size: 40,
-                          color: theme.colorScheme.primary,
-                        ),
-                      ],
-                    ],
+          child: Row(
+            children: [
+              _NavButton(
+                icon: Icons.arrow_back_rounded,
+                tooltip: 'Önceki',
+                onPressed: isFirst ? null : _goToPrevious,
+              ),
+              Expanded(
+                child: Text(
+                  '${_currentIndex + 1} / ${words.length}',
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
                   ),
+                ),
+              ),
+              if (isLast)
+                _NavButton(
+                  icon: Icons.replay_rounded,
+                  tooltip: 'Başa dön',
+                  onPressed: words.length > 1 ? _goToFirst : null,
+                )
+              else
+                _NavButton(
+                  icon: Icons.arrow_forward_rounded,
+                  tooltip: 'Sonraki',
+                  onPressed: _goToNext,
+                ),
+            ],
           ),
         ),
       ],
@@ -335,6 +356,41 @@ Color _colorFor(String text) {
     sum += unit;
   }
   return _cardColors[sum % _cardColors.length];
+}
+
+/// Alt çubuktaki büyük, yalnızca simgeli geçiş butonu.
+/// [onPressed] null ise buton soluk ve pasif görünür.
+class _NavButton extends StatelessWidget {
+  const _NavButton({
+    required this.icon,
+    required this.tooltip,
+    required this.onPressed,
+  });
+
+  final IconData icon;
+  final String tooltip;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: SizedBox(
+        width: 96,
+        height: 72,
+        child: FilledButton(
+          onPressed: onPressed,
+          style: FilledButton.styleFrom(
+            padding: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+          ),
+          child: Icon(icon, size: 44),
+        ),
+      ),
+    );
+  }
 }
 
 /// Yükleme hatası veya boş liste durumunda gösterilen sade mesaj.
