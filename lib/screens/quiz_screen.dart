@@ -16,15 +16,24 @@ import '../widgets/word_picture.dart';
 /// arasından doğrusuna dokunur. Yanlış resim soluklaşır ve tekrar denenebilir.
 /// Doğru resim bulununca kısa bir süre sonra sonraki soruya geçilir.
 /// İlk denemede bilinen sorular puan sayılır. Sonda yıldızlı sonuç gösterilir.
+///
+/// [category] verilirse yalnızca o gruptan sorulur. [mixCategories] true ise
+/// sorular bütün gruplara dengeli dağıtılır (karışık test).
 class QuizScreen extends StatefulWidget {
   const QuizScreen({
     super.key,
     this.repository = const WordRepository(),
     this.questionCount = 10,
+    this.category,
+    this.title = 'Quiz',
+    this.mixCategories = false,
   });
 
   final WordRepository repository;
   final int questionCount;
+  final String? category;
+  final String title;
+  final bool mixCategories;
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -59,7 +68,8 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   Future<List<Word>> _loadWords() async {
-    final List<Word> words = await widget.repository.loadWords();
+    final List<Word> words =
+        await widget.repository.loadWords(category: widget.category);
     _startRound(words);
     return words;
   }
@@ -74,6 +84,7 @@ class _QuizScreenState extends State<QuizScreen> {
     _questions = _generator.generate(
       words,
       questionCount: widget.questionCount,
+      mixCategories: widget.mixCategories,
     );
     _currentIndex = 0;
     _score = 0;
@@ -143,7 +154,7 @@ class _QuizScreenState extends State<QuizScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'Quiz',
+          widget.title,
           style: theme.textTheme.headlineMedium?.copyWith(
             color: theme.colorScheme.primary,
           ),

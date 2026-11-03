@@ -15,13 +15,18 @@ import '../widgets/word_picture.dart';
 /// eski kart sola çıkar, yenisi sağdan girer (PageView'ın varsayılanı).
 /// Alttaki ileri/geri butonlarıyla da geçilebilir. Son kelimede
 /// durulur ve ileri butonu yerine "Başa dön" butonu gösterilir.
+/// [category] verilirse yalnızca o gruptaki kelimeler gösterilir.
 class WordCardScreen extends StatefulWidget {
   const WordCardScreen({
     super.key,
     this.repository = const WordRepository(),
+    this.category,
+    this.title = 'Kelimeler',
   });
 
   final WordRepository repository;
+  final String? category;
+  final String title;
 
   @override
   State<WordCardScreen> createState() => _WordCardScreenState();
@@ -35,8 +40,11 @@ class _WordCardScreenState extends State<WordCardScreen> {
   @override
   void initState() {
     super.initState();
-    _wordsFuture = widget.repository.loadShuffledWords();
+    _wordsFuture = _loadWords();
   }
+
+  Future<List<Word>> _loadWords() =>
+      widget.repository.loadShuffledWords(category: widget.category);
 
   @override
   void dispose() {
@@ -48,7 +56,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
   void _retry() {
     setState(() {
       _currentIndex = 0;
-      _wordsFuture = widget.repository.loadShuffledWords();
+      _wordsFuture = _loadWords();
     });
   }
 
@@ -90,7 +98,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'Kelimeler',
+          widget.title,
           style: theme.textTheme.headlineMedium?.copyWith(
             color: theme.colorScheme.primary,
           ),
