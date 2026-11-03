@@ -7,56 +7,72 @@ import 'package:kelime_macerasi/main.dart';
 import 'package:kelime_macerasi/models/word.dart';
 import 'package:kelime_macerasi/models/word_category.dart';
 import 'package:kelime_macerasi/screens/category_screen.dart';
+import 'package:kelime_macerasi/screens/quiz_mode_screen.dart';
 import 'package:kelime_macerasi/screens/quiz_screen.dart';
 import 'package:kelime_macerasi/screens/sentence_screen.dart';
 
+/// Ana ekran kaydırılabilir; butona dokunmadan önce görünür alana getirir.
+Future<void> _tapMenu(WidgetTester tester, String label) async {
+  await tester.ensureVisible(find.text(label));
+  await tester.tap(find.text(label));
+  // Yükleme göstergesi sürekli döndüğü için pumpAndSettle kullanılmıyor.
+  await tester.pump();
+  await tester.pump(const Duration(milliseconds: 500));
+}
+
 void main() {
-  testWidgets('Ana ekran dört menü butonunu gösterir',
+  testWidgets('Ana ekran menü butonlarını ve günlük hedefi gösterir',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
-    expect(find.text('Words'), findsOneWidget);
-    expect(find.text('Sentences'), findsOneWidget);
-    expect(find.text('Quiz'), findsOneWidget);
-    expect(find.text('Mixed Test'), findsOneWidget);
+    for (final String label in <String>[
+      'Words',
+      'Sentences',
+      'Quiz',
+      'Mixed Test',
+      'Review',
+      'Favorites',
+    ]) {
+      expect(find.text(label), findsOneWidget);
+    }
+    expect(find.textContaining('Today:'), findsOneWidget);
   });
 
   testWidgets('Sentences butonu grup seçme ekranını açar',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
-
-    await tester.tap(find.text('Sentences'));
-    // Yükleme göstergesi sürekli döndüğü için pumpAndSettle kullanılmıyor.
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
+    await _tapMenu(tester, 'Sentences');
 
     expect(find.byType(CategoryScreen), findsOneWidget);
   });
 
-  testWidgets('Quiz butonu grup seçme ekranını açar',
+  testWidgets('Quiz butonu tür seçme ekranını açar',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
+    await _tapMenu(tester, 'Quiz');
 
-    await tester.tap(find.text('Quiz'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
-
-    expect(find.byType(CategoryScreen), findsOneWidget);
+    expect(find.byType(QuizModeScreen), findsOneWidget);
+    expect(find.text('Listen & Choose'), findsOneWidget);
+    expect(find.text('Type the Word'), findsOneWidget);
   });
 
   testWidgets('Mixed Test butonu quiz ekranını açar',
       (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
-
-    await tester.tap(find.text('Mixed Test'));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
+    await _tapMenu(tester, 'Mixed Test');
 
     expect(find.byType(QuizScreen), findsOneWidget);
   });
 
-  test('words.json: kelimeler tekrar etmez, grupları tanımlı ve '
-      'cümlede kelime geçer', () {
+  testWidgets('Review butonu quiz ekranını açar', (WidgetTester tester) async {
+    await tester.pumpWidget(const KelimeApp());
+    await _tapMenu(tester, 'Review');
+
+    expect(find.byType(QuizScreen), findsOneWidget);
+  });
+
+  test('words.json: kelimeler tekrar etmez, grupları tanımlı, '
+      'cümlede kelime geçer ve tanım cevabı ele vermez', () {
     final List<Object?> data = jsonDecode(
       File('assets/data/words.json').readAsStringSync(),
     ) as List<Object?>;
@@ -75,6 +91,19 @@ void main() {
             .any((SentencePart part) => part.isHighlighted),
         isTrue,
         reason: '${word.english} cümlesinde geçmiyor',
+      );
+      expect(
+        word.exampleSentence.split(' ').length,
+        lessThanOrEqualTo(6),
+        reason: '${word.english} cümlesi 6 kelimeden uzun',
+      );
+      final String? definition = word.definition;
+      expect(definition, isNotNull, reason: '${word.english} tanımı yok');
+      expect(
+        splitSentence(definition!, word.english)
+            .any((SentencePart part) => part.isHighlighted),
+        isFalse,
+        reason: '${word.english} tanımında kelimenin kendisi geçiyor',
       );
     }
   });

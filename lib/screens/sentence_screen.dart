@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart' show PointerDeviceKind;
 import 'package:flutter/material.dart';
 
 import '../models/word.dart';
+import '../services/progress_store.dart';
 import '../services/tts_service.dart';
 import '../services/word_repository.dart';
 import '../widgets/card_colors.dart';
@@ -20,12 +21,19 @@ class SentenceScreen extends StatefulWidget {
     super.key,
     this.repository = const WordRepository(),
     this.category,
+    this.onlyWords,
     this.title = 'Sentences',
+    this.emptyMessage = 'Henüz cümle yok.',
   });
 
   final WordRepository repository;
   final String? category;
+
+  /// Verilirse yalnızca İngilizcesi (küçük harfle) bu kümede olan
+  /// kelimeler gösterilir (ör. favoriler).
+  final Set<String>? onlyWords;
   final String title;
+  final String emptyMessage;
 
   @override
   State<SentenceScreen> createState() => _SentenceScreenState();
@@ -42,8 +50,17 @@ class _SentenceScreenState extends State<SentenceScreen> {
     _wordsFuture = _loadWords();
   }
 
-  Future<List<Word>> _loadWords() =>
-      widget.repository.loadShuffledWords(category: widget.category);
+  /// Kelimeleri yükler; ilk kart görüldüğü için günlük hedefe sayılır.
+  Future<List<Word>> _loadWords() async {
+    final List<Word> words = await widget.repository.loadShuffledWords(
+      category: widget.category,
+      only: widget.onlyWords,
+    );
+    if (words.isNotEmpty) {
+      ProgressStore.instance.markStudied(words.first);
+    }
+    return words;
+  }
 
   @override
   void dispose() {
@@ -133,9 +150,9 @@ class _SentenceScreenState extends State<SentenceScreen> {
 
             final List<Word> words = snapshot.data ?? const <Word>[];
             if (words.isEmpty) {
-              return const MessageView(
+              return MessageView(
                 icon: Icons.inbox_rounded,
-                message: 'Henüz cümle yok.',
+                message: widget.emptyMessage,
               );
             }
 
@@ -169,6 +186,7 @@ class _SentenceScreenState extends State<SentenceScreen> {
               itemCount: words.length,
               onPageChanged: (int index) {
                 setState(() => _currentIndex = index);
+                ProgressStore.instance.markStudied(words[index]);
               },
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
