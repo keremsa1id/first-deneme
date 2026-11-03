@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:kelime_macerasi/main.dart';
+import 'package:kelime_macerasi/screens/quiz_screen.dart';
 import 'package:kelime_macerasi/screens/sentence_screen.dart';
 
 void main() {
@@ -21,6 +22,16 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
 
     expect(find.byType(SentenceScreen), findsOneWidget);
+  });
+
+  testWidgets('Quiz butonu quiz ekranını açar', (WidgetTester tester) async {
+    await tester.pumpWidget(const KelimeApp());
+
+    await tester.tap(find.text('Quiz'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
+    expect(find.byType(QuizScreen), findsOneWidget);
   });
 
   group('splitSentence', () {

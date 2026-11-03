@@ -35,7 +35,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
   @override
   void initState() {
     super.initState();
-    _wordsFuture = widget.repository.loadWords();
+    _wordsFuture = widget.repository.loadShuffledWords();
   }
 
   @override
@@ -48,7 +48,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
   void _retry() {
     setState(() {
       _currentIndex = 0;
-      _wordsFuture = widget.repository.loadWords();
+      _wordsFuture = widget.repository.loadShuffledWords();
     });
   }
 

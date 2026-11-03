@@ -34,7 +34,7 @@ class _SentenceScreenState extends State<SentenceScreen> {
   @override
   void initState() {
     super.initState();
-    _wordsFuture = widget.repository.loadWords();
+    _wordsFuture = widget.repository.loadShuffledWords();
   }
 
   @override
@@ -47,7 +47,7 @@ class _SentenceScreenState extends State<SentenceScreen> {
   void _retry() {
     setState(() {
       _currentIndex = 0;
-      _wordsFuture = widget.repository.loadWords();
+      _wordsFuture = widget.repository.loadShuffledWords();
     });
   }
 

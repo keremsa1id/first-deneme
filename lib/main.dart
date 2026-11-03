@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/quiz_screen.dart';
 import 'screens/sentence_screen.dart';
 import 'screens/word_card_screen.dart';
 
@@ -36,17 +37,6 @@ class KelimeApp extends StatelessWidget {
 /// Geçici ana ekran. Asıl ekranlar lib/screens/ altına eklenecek.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
-  void _showComingSoon(BuildContext context) {
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        const SnackBar(
-          content: Text('Yakında', style: TextStyle(fontSize: 20)),
-          duration: Duration(seconds: 2),
-        ),
-      );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +85,11 @@ class HomeScreen extends StatelessWidget {
                 _MenuButton(
                   label: 'Quiz',
                   icon: Icons.star,
-                  onPressed: () => _showComingSoon(context),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const QuizScreen(),
+                    ),
+                  ),
                 ),
               ],
             ),

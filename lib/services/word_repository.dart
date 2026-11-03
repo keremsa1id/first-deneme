@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -74,6 +75,14 @@ class WordRepository {
         );
       }
     }
+    return List<Word>.unmodifiable(words);
+  }
+
+  /// [loadWords] gibi yükler ama kelimeleri rastgele sıraya dizer;
+  /// böylece ekran her açılışta farklı bir kelimeyle başlar.
+  Future<List<Word>> loadShuffledWords({Random? random}) async {
+    final List<Word> words = List<Word>.of(await loadWords())
+      ..shuffle(random);
     return List<Word>.unmodifiable(words);
   }
 }
