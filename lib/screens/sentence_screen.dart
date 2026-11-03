@@ -14,13 +14,18 @@ import '../widgets/word_picture.dart';
 /// Gezinme [WordCardScreen] ile aynıdır: parmağı SOLA kaydırınca SONRAKİ
 /// cümle gelir (eski kart sola çıkar), alttaki butonlarla da geçilebilir.
 /// Cümlede öğrenilen kelime renkli ve kalın gösterilir.
+/// [category] verilirse yalnızca o gruptaki kelimelerin cümleleri gösterilir.
 class SentenceScreen extends StatefulWidget {
   const SentenceScreen({
     super.key,
     this.repository = const WordRepository(),
+    this.category,
+    this.title = 'Cümleler',
   });
 
   final WordRepository repository;
+  final String? category;
+  final String title;
 
   @override
   State<SentenceScreen> createState() => _SentenceScreenState();
@@ -34,8 +39,11 @@ class _SentenceScreenState extends State<SentenceScreen> {
   @override
   void initState() {
     super.initState();
-    _wordsFuture = widget.repository.loadShuffledWords();
+    _wordsFuture = _loadWords();
   }
+
+  Future<List<Word>> _loadWords() =>
+      widget.repository.loadShuffledWords(category: widget.category);
 
   @override
   void dispose() {
@@ -47,7 +55,7 @@ class _SentenceScreenState extends State<SentenceScreen> {
   void _retry() {
     setState(() {
       _currentIndex = 0;
-      _wordsFuture = widget.repository.loadShuffledWords();
+      _wordsFuture = _loadWords();
     });
   }
 
@@ -89,7 +97,7 @@ class _SentenceScreenState extends State<SentenceScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'Cümleler',
+          widget.title,
           style: theme.textTheme.headlineMedium?.copyWith(
             color: theme.colorScheme.primary,
           ),

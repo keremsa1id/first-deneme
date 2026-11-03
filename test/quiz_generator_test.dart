@@ -67,6 +67,28 @@ void main() {
     expect(questions.first.options, hasLength(2));
   });
 
+  test('karışık modda sorular gruplara dengeli dağılır', () {
+    for (int seed = 0; seed < 20; seed++) {
+      final List<QuizQuestion> questions = QuizGenerator(random: Random(seed))
+          .generate(words, questionCount: 4, mixCategories: true);
+
+      expect(questions, hasLength(4));
+      expect(questions.map((QuizQuestion q) => q.answer).toSet(), hasLength(4));
+      // 2 grup, 4 soru: her gruptan tam 2 soru gelmeli.
+      expect(
+        questions.where((QuizQuestion q) => q.answer.category == 'objects'),
+        hasLength(2),
+      );
+    }
+  });
+
+  test('karışık modda kelime sayısından fazla soru üretmez', () {
+    expect(
+      generator().generate(words, questionCount: 50, mixCategories: true),
+      hasLength(8),
+    );
+  });
+
   test('boş listede soru üretmez', () {
     expect(generator().generate(const <Word>[]), isEmpty);
   });

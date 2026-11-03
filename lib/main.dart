@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'models/word_category.dart';
+import 'screens/category_screen.dart';
 import 'screens/quiz_screen.dart';
 import 'screens/sentence_screen.dart';
 import 'screens/word_card_screen.dart';
@@ -34,9 +36,16 @@ class KelimeApp extends StatelessWidget {
   }
 }
 
-/// Geçici ana ekran. Asıl ekranlar lib/screens/ altına eklenecek.
+/// Ana menü. Kelimeler, Cümleler ve Quiz önce grup seçtirir;
+/// Karışık Test bütün gruplardan soru sorar.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  void _open(BuildContext context, Widget screen) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (BuildContext context) => screen),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,10 +72,14 @@ class HomeScreen extends StatelessWidget {
                 _MenuButton(
                   label: 'Kelimeler',
                   icon: Icons.abc,
-                  onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const WordCardScreen(),
+                  onPressed: () => _open(
+                    context,
+                    CategoryScreen(
+                      title: 'Kelimeler',
+                      builder: (WordCategory category) => WordCardScreen(
+                        category: category.id,
+                        title: category.name,
+                      ),
                     ),
                   ),
                 ),
@@ -74,10 +87,14 @@ class HomeScreen extends StatelessWidget {
                 _MenuButton(
                   label: 'Cümleler',
                   icon: Icons.chat_bubble,
-                  onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const SentenceScreen(),
+                  onPressed: () => _open(
+                    context,
+                    CategoryScreen(
+                      title: 'Cümleler',
+                      builder: (WordCategory category) => SentenceScreen(
+                        category: category.id,
+                        title: category.name,
+                      ),
                     ),
                   ),
                 ),
@@ -85,9 +102,29 @@ class HomeScreen extends StatelessWidget {
                 _MenuButton(
                   label: 'Quiz',
                   icon: Icons.star,
-                  onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const QuizScreen(),
+                  onPressed: () => _open(
+                    context,
+                    CategoryScreen(
+                      title: 'Quiz',
+                      // Seçim yapılabilmesi için en az iki şık gerekir.
+                      minWords: 2,
+                      builder: (WordCategory category) => QuizScreen(
+                        category: category.id,
+                        title: category.name,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                _MenuButton(
+                  label: 'Karışık Test',
+                  icon: Icons.shuffle_rounded,
+                  onPressed: () => _open(
+                    context,
+                    const QuizScreen(
+                      title: 'Karışık Test',
+                      questionCount: 15,
+                      mixCategories: true,
                     ),
                   ),
                 ),

@@ -1,19 +1,28 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:kelime_macerasi/main.dart';
+import 'package:kelime_macerasi/models/word.dart';
+import 'package:kelime_macerasi/models/word_category.dart';
+import 'package:kelime_macerasi/screens/category_screen.dart';
 import 'package:kelime_macerasi/screens/quiz_screen.dart';
 import 'package:kelime_macerasi/screens/sentence_screen.dart';
 
 void main() {
-  testWidgets('Ana ekran üç menü butonunu gösterir', (WidgetTester tester) async {
+  testWidgets('Ana ekran dört menü butonunu gösterir',
+      (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
     expect(find.text('Kelimeler'), findsOneWidget);
     expect(find.text('Cümleler'), findsOneWidget);
     expect(find.text('Quiz'), findsOneWidget);
+    expect(find.text('Karışık Test'), findsOneWidget);
   });
 
-  testWidgets('Cümleler butonu cümle ekranını açar', (WidgetTester tester) async {
+  testWidgets('Cümleler butonu grup seçme ekranını açar',
+      (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
     await tester.tap(find.text('Cümleler'));
@@ -21,17 +30,53 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
 
-    expect(find.byType(SentenceScreen), findsOneWidget);
+    expect(find.byType(CategoryScreen), findsOneWidget);
   });
 
-  testWidgets('Quiz butonu quiz ekranını açar', (WidgetTester tester) async {
+  testWidgets('Quiz butonu grup seçme ekranını açar',
+      (WidgetTester tester) async {
     await tester.pumpWidget(const KelimeApp());
 
     await tester.tap(find.text('Quiz'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
 
+    expect(find.byType(CategoryScreen), findsOneWidget);
+  });
+
+  testWidgets('Karışık Test butonu quiz ekranını açar',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const KelimeApp());
+
+    await tester.tap(find.text('Karışık Test'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+
     expect(find.byType(QuizScreen), findsOneWidget);
+  });
+
+  test('words.json: kelimeler tekrar etmez, grupları tanımlı ve '
+      'cümlede kelime geçer', () {
+    final List<Object?> data = jsonDecode(
+      File('assets/data/words.json').readAsStringSync(),
+    ) as List<Object?>;
+    final Set<String> categoryIds =
+        wordCategories.map((WordCategory c) => c.id).toSet();
+    final Set<String> seen = <String>{};
+
+    for (final Object? item in data) {
+      final Word word = Word.fromJson(item! as Map<String, dynamic>);
+      expect(seen.add(word.english.toLowerCase()), isTrue,
+          reason: '${word.english} iki kez var');
+      expect(categoryIds, contains(word.category),
+          reason: '${word.english} grubu tanımsız');
+      expect(
+        splitSentence(word.exampleSentence, word.english)
+            .any((SentencePart part) => part.isHighlighted),
+        isTrue,
+        reason: '${word.english} cümlesinde geçmiyor',
+      );
+    }
   });
 
   group('splitSentence', () {
