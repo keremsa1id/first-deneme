@@ -1,0 +1,142 @@
+[
+  {
+    "english": "cat",
+    "turkish": "kedi",
+    "category": "animals",
+    "imagePath": "assets/images/animals/cat.png",
+    "exampleSentence": "The cat is sleeping."
+  },
+  {
+    "english": "dog",
+    "turkish": "köpek",
+    "category": "animals",
+    "imagePath": "assets/images/animals/dog.png",
+    "exampleSentence": "My dog likes to play."
+  },
+  {
+    "english": "bird",
+    "turkish": "kuş",
+    "category": "animals",
+    "imagePath": "assets/images/animals/bird.png",
+    "exampleSentence": "The bird can fly."
+  },
+  {
+    "english": "fish",
+    "turkish": "balık",
+    "category": "animals",
+    "imagePath": "assets/images/animals/fish.png",
+    "exampleSentence": "The fish swims fast."
+  },
+  {
+    "english": "horse",
+    "turkish": "at",
+    "category": "animals",
+    "imagePath": "assets/images/animals/horse.png",
+    "exampleSentence": "The horse is very big."
+  },
+  {
+    "english": "cow",
+    "turkish": "inek",
+    "category": "animals",
+    "imagePath": "assets/images/animals/cow.png",
+    "exampleSentence": "The cow gives us milk."
+  },
+  {
+    "english": "sheep",
+    "turkish": "koyun",
+    "category": "animals",
+    "imagePath": "assets/images/animals/sheep.png",
+    "exampleSentence": "The sheep is white."
+  },
+  {
+    "english": "duck",
+    "turkish": "ördek",
+    "category": "animals",
+    "imagePath": "assets/images/animals/duck.png",
+    "exampleSentence": "The duck says quack."
+  },
+  {
+    "english": "rabbit",
+    "turkish": "tavşan",
+    "category": "animals",
+    "imagePath": "assets/images/animals/rabbit.png",
+    "exampleSentence": "The rabbit eats a carrot."
+  },
+  {
+    "english": "frog",
+    "turkish": "kurbağa",
+    "category": "animals",
+    "imagePath": "assets/images/animals/frog.png",
+    "exampleSentence": "The frog is green."
+  },
+  {
+    "english": "elephant",
+    "turkish": "fil",
+    "category": "animals",
+    "imagePath": "assets/images/animals/elephant.png",
+    "exampleSentence": "The elephant has big ears."
+  },
+  {
+    "english": "lion",
+    "turkish": "aslan",
+    "category": "animals",
+    "imagePath": "assets/images/animals/lion.png",
+    "exampleSentence": "The lion is yellow."
+  },
+  {
+    "english": "monkey",
+    "turkish": "maymun",
+    "category": "animals",
+    "imagePath": "assets/images/animals/monkey.png",
+    "exampleSentence": "The monkey likes bananas."
+  },
+  {
+    "english": "bear",
+    "turkish": "ayı",
+    "category": "animals",
+    "imagePath": "assets/images/animals/bear.png",
+    "exampleSentence": "The bear loves honey."
+  },
+  {
+    "english": "giraffe",
+    "turkish": "zürafa",
+    "category": "animals",
+    "imagePath": "assets/images/animals/giraffe.png",
+    "exampleSentence": "The giraffe is very tall."
+  },
+  {
+    "english": "chicken",
+    "turkish": "tavuk",
+    "category": "animals",
+    "imagePath": "assets/images/animals/chicken.png",
+    "exampleSentence": "The chicken lays an egg."
+  },
+  {
+    "english": "pig",
+    "turkish": "domuz",
+    "category": "animals",
+    "imagePath": "assets/images/animals/pig.png",
+    "exampleSentence": "The pig is pink."
+  },
+  {
+    "english": "turtle",
+    "turkish": "kaplumbağa",
+    "category": "animals",
+    "imagePath": "assets/images/animals/turtle.png",
+    "exampleSentence": "The turtle walks slowly."
+  },
+  {
+    "english": "butterfly",
+    "turkish": "kelebek",
+    "category": "animals",
+    "imagePath": "assets/images/animals/butterfly.png",
+    "exampleSentence": "The butterfly is beautiful."
+  },
+  {
+    "english": "penguin",
+    "turkish": "penguen",
+    "category": "animals",
+    "imagePath": "assets/images/animals/penguin.png",
+    "exampleSentence": "The penguin lives on ice."
+  }
+]
