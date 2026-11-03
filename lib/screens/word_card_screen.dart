@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart' show PointerDeviceKind;
 import 'package:flutter/material.dart';
 
 import '../models/word.dart';
+import '../services/progress_store.dart';
 import '../services/tts_service.dart';
 import '../services/word_repository.dart';
 import '../widgets/card_colors.dart';
@@ -21,12 +22,19 @@ class WordCardScreen extends StatefulWidget {
     super.key,
     this.repository = const WordRepository(),
     this.category,
+    this.onlyWords,
     this.title = 'Words',
+    this.emptyMessage = 'Henüz kelime yok.',
   });
 
   final WordRepository repository;
   final String? category;
+
+  /// Verilirse yalnızca İngilizcesi (küçük harfle) bu kümede olan
+  /// kelimeler gösterilir (ör. favoriler).
+  final Set<String>? onlyWords;
   final String title;
+  final String emptyMessage;
 
   @override
   State<WordCardScreen> createState() => _WordCardScreenState();
@@ -43,8 +51,17 @@ class _WordCardScreenState extends State<WordCardScreen> {
     _wordsFuture = _loadWords();
   }
 
-  Future<List<Word>> _loadWords() =>
-      widget.repository.loadShuffledWords(category: widget.category);
+  /// Kelimeleri yükler; ilk kart görüldüğü için günlük hedefe sayılır.
+  Future<List<Word>> _loadWords() async {
+    final List<Word> words = await widget.repository.loadShuffledWords(
+      category: widget.category,
+      only: widget.onlyWords,
+    );
+    if (words.isNotEmpty) {
+      ProgressStore.instance.markStudied(words.first);
+    }
+    return words;
+  }
 
   @override
   void dispose() {
@@ -134,9 +151,9 @@ class _WordCardScreenState extends State<WordCardScreen> {
 
             final List<Word> words = snapshot.data ?? const <Word>[];
             if (words.isEmpty) {
-              return const MessageView(
+              return MessageView(
                 icon: Icons.inbox_rounded,
-                message: 'Henüz kelime yok.',
+                message: widget.emptyMessage,
               );
             }
 
@@ -170,6 +187,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
               itemCount: words.length,
               onPageChanged: (int index) {
                 setState(() => _currentIndex = index);
+                ProgressStore.instance.markStudied(words[index]);
               },
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
@@ -243,7 +261,20 @@ class _WordCard extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            Expanded(child: WordPicture(word: word, color: color)),
+            Expanded(
+              child: Stack(
+                children: [
+                  Positioned.fill(
+                    child: WordPicture(word: word, color: color),
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: FavoriteButton(word: word),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(height: 24),
             FittedBox(
               fit: BoxFit.scaleDown,
@@ -268,11 +299,37 @@ class _WordCard extends StatelessWidget {
                 ),
               ),
             ),
-            // TODO: Kelimeyi sesli okumak için buraya büyük bir ses butonu
-            // eklenecek (flutter_tts, sonraki adım).
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Kelimeyi favorilere ekleyen/çıkaran yıldız butonu.
+class FavoriteButton extends StatelessWidget {
+  const FavoriteButton({super.key, required this.word});
+
+  final Word word;
+
+  @override
+  Widget build(BuildContext context) {
+    final ProgressStore progress = ProgressStore.instance;
+
+    return ListenableBuilder(
+      listenable: progress,
+      builder: (BuildContext context, Widget? _) {
+        final bool isFavorite = progress.isFavorite(word);
+        return IconButton(
+          iconSize: 56,
+          tooltip: isFavorite ? 'Remove from favorites' : 'Add to favorites',
+          onPressed: () => progress.toggleFavorite(word),
+          icon: Icon(
+            isFavorite ? Icons.star_rounded : Icons.star_border_rounded,
+            color: const Color(0xFFFFC107),
+          ),
+        );
+      },
     );
   }
 }

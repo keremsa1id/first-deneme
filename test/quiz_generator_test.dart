@@ -89,6 +89,30 @@ void main() {
     );
   });
 
+  test('canAsk ile yalnızca seçilen kelimeler sorulur, şıklar hepsinden', () {
+    final List<QuizQuestion> questions = generator().generate(
+      words,
+      canAsk: (Word w) => w.english == 'cup' || w.english == 'cat',
+    );
+
+    expect(questions, hasLength(2));
+    for (final QuizQuestion q in questions) {
+      expect(<String>['cup', 'cat'], contains(q.answer.english));
+      expect(q.options, hasLength(4));
+    }
+  });
+
+  test('avoidOption ile dışlanan kelime şık olmaz', () {
+    for (final QuizQuestion q in generator().generate(
+      words,
+      avoidOption: (Word answer, Word option) => option.english == 'dog',
+    )) {
+      if (q.answer.english != 'dog') {
+        expect(q.options.map((Word w) => w.english), isNot(contains('dog')));
+      }
+    }
+  });
+
   test('boş listede soru üretmez', () {
     expect(generator().generate(const <Word>[]), isEmpty);
   });

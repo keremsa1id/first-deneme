@@ -26,11 +26,17 @@ class QuizGenerator {
   ///
   /// [mixCategories] true ise sorular gruplara sırayla dağıtılır; böylece
   /// karışık testte her gruptan soru gelir, tek bir grup baskın olmaz.
+  ///
+  /// [canAsk] verilirse yalnızca onu sağlayan kelimeler sorulur (ör. tekrar
+  /// destesi); şıklar yine bütün listeden seçilir. [avoidOption] true dönen
+  /// kelimeler o sorunun yanlış şıkkı yapılmaz (ör. tanımda geçen kelime).
   List<QuizQuestion> generate(
     List<Word> words, {
     int questionCount = 10,
     int optionCount = 4,
     bool mixCategories = false,
+    bool Function(Word word)? canAsk,
+    bool Function(Word answer, Word option)? avoidOption,
   }) {
     // Aynı İngilizce kelime iki kez gelirse şıklarda tekrar olmasın.
     final Map<String, Word> unique = <String, Word>{};
@@ -42,17 +48,19 @@ class QuizGenerator {
       return const <QuizQuestion>[];
     }
 
-    final int count = min(questionCount, pool.length);
+    final List<Word> askable =
+        canAsk == null ? pool : pool.where(canAsk).toList();
+    final int count = min(questionCount, askable.length);
     final List<Word> answers = mixCategories
-        ? _mixedAnswers(pool, count)
-        : (List<Word>.of(pool)..shuffle(_random)).take(count).toList();
+        ? _mixedAnswers(askable, count)
+        : (List<Word>.of(askable)..shuffle(_random)).take(count).toList();
     final int optionsPerQuestion = min(optionCount, pool.length);
 
     return <QuizQuestion>[
       for (final Word answer in answers)
         QuizQuestion(
           answer: answer,
-          options: _optionsFor(answer, pool, optionsPerQuestion),
+          options: _optionsFor(answer, pool, optionsPerQuestion, avoidOption),
         ),
     ];
   }
@@ -82,11 +90,17 @@ class QuizGenerator {
     return picked..shuffle(_random);
   }
 
-  List<Word> _optionsFor(Word answer, List<Word> pool, int optionCount) {
+  List<Word> _optionsFor(
+    Word answer,
+    List<Word> pool,
+    int optionCount,
+    bool Function(Word answer, Word option)? avoidOption,
+  ) {
     final List<Word> sameCategory = <Word>[];
     final List<Word> otherCategory = <Word>[];
     for (final Word word in pool) {
-      if (identical(word, answer)) {
+      if (identical(word, answer) ||
+          (avoidOption != null && avoidOption(answer, word))) {
         continue;
       }
       (word.category == answer.category ? sameCategory : otherCategory)

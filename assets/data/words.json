@@ -5,7 +5,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/cat.png",
     "exampleSentence": "The cat is sleeping.",
-    "emoji": "🐱"
+    "emoji": "🐱",
+    "definition": "A small pet that says meow."
   },
   {
     "english": "dog",
@@ -13,7 +14,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/dog.png",
     "exampleSentence": "My dog likes to play.",
-    "emoji": "🐶"
+    "emoji": "🐶",
+    "definition": "A pet that says woof."
   },
   {
     "english": "bird",
@@ -21,7 +23,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/bird.png",
     "exampleSentence": "The bird can fly.",
-    "emoji": "🐦"
+    "emoji": "🐦",
+    "definition": "An animal with wings and feathers."
   },
   {
     "english": "fish",
@@ -29,7 +32,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/fish.png",
     "exampleSentence": "The fish swims fast.",
-    "emoji": "🐟"
+    "emoji": "🐟",
+    "definition": "An animal that lives in water."
   },
   {
     "english": "horse",
@@ -37,7 +41,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/horse.png",
     "exampleSentence": "The horse is very big.",
-    "emoji": "🐴"
+    "emoji": "🐴",
+    "definition": "A big animal people can ride."
   },
   {
     "english": "cow",
@@ -45,7 +50,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/cow.png",
     "exampleSentence": "The cow gives us milk.",
-    "emoji": "🐮"
+    "emoji": "🐮",
+    "definition": "A farm animal that says moo."
   },
   {
     "english": "sheep",
@@ -53,7 +59,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/sheep.png",
     "exampleSentence": "The sheep is white.",
-    "emoji": "🐑"
+    "emoji": "🐑",
+    "definition": "A farm animal with soft wool."
   },
   {
     "english": "duck",
@@ -61,7 +68,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/duck.png",
     "exampleSentence": "The duck says quack.",
-    "emoji": "🦆"
+    "emoji": "🦆",
+    "definition": "A bird that swims and says quack."
   },
   {
     "english": "rabbit",
@@ -69,7 +77,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/rabbit.png",
     "exampleSentence": "The rabbit eats a carrot.",
-    "emoji": "🐰"
+    "emoji": "🐰",
+    "definition": "A small animal with long ears that hops."
   },
   {
     "english": "frog",
@@ -77,7 +86,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/frog.png",
     "exampleSentence": "The frog is green.",
-    "emoji": "🐸"
+    "emoji": "🐸",
+    "definition": "A green animal that jumps and says ribbit."
   },
   {
     "english": "elephant",
@@ -85,7 +95,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/elephant.png",
     "exampleSentence": "The elephant has big ears.",
-    "emoji": "🐘"
+    "emoji": "🐘",
+    "definition": "A very big gray animal with a long trunk."
   },
   {
     "english": "lion",
@@ -93,7 +104,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/lion.png",
     "exampleSentence": "The lion is yellow.",
-    "emoji": "🦁"
+    "emoji": "🦁",
+    "definition": "The king of the jungle. It roars."
   },
   {
     "english": "monkey",
@@ -101,7 +113,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/monkey.png",
     "exampleSentence": "The monkey likes bananas.",
-    "emoji": "🐵"
+    "emoji": "🐵",
+    "definition": "An animal that climbs trees and eats bananas."
   },
   {
     "english": "bear",
@@ -109,7 +122,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/bear.png",
     "exampleSentence": "The bear loves honey.",
-    "emoji": "🐻"
+    "emoji": "🐻",
+    "definition": "A big furry animal that loves honey."
   },
   {
     "english": "giraffe",
@@ -117,7 +131,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/giraffe.png",
     "exampleSentence": "The giraffe is very tall.",
-    "emoji": "🦒"
+    "emoji": "🦒",
+    "definition": "An animal with a very long neck."
   },
   {
     "english": "chicken",
@@ -125,7 +140,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/chicken.png",
     "exampleSentence": "The chicken lays an egg.",
-    "emoji": "🐔"
+    "emoji": "🐔",
+    "definition": "A farm bird that lays eggs."
   },
   {
     "english": "pig",
@@ -133,7 +149,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/pig.png",
     "exampleSentence": "The pig is pink.",
-    "emoji": "🐷"
+    "emoji": "🐷",
+    "definition": "A pink farm animal that says oink."
   },
   {
     "english": "turtle",
@@ -141,7 +158,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/turtle.png",
     "exampleSentence": "The turtle walks slowly.",
-    "emoji": "🐢"
+    "emoji": "🐢",
+    "definition": "A slow animal with a hard shell."
   },
   {
     "english": "butterfly",
@@ -149,7 +167,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/butterfly.png",
     "exampleSentence": "The butterfly is beautiful.",
-    "emoji": "🦋"
+    "emoji": "🦋",
+    "definition": "An insect with big colorful wings."
   },
   {
     "english": "penguin",
@@ -157,7 +176,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/penguin.png",
     "exampleSentence": "The penguin lives on ice.",
-    "emoji": "🐧"
+    "emoji": "🐧",
+    "definition": "A black and white bird that cannot fly."
   },
   {
     "english": "tiger",
@@ -165,7 +185,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/tiger.png",
     "exampleSentence": "The tiger has stripes.",
-    "emoji": "🐯"
+    "emoji": "🐯",
+    "definition": "A big wild animal with orange and black stripes."
   },
   {
     "english": "owl",
@@ -173,7 +194,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/owl.png",
     "exampleSentence": "The owl sleeps in the day.",
-    "emoji": "🦉"
+    "emoji": "🦉",
+    "definition": "A bird that is awake at night."
   },
   {
     "english": "bee",
@@ -181,7 +203,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/bee.png",
     "exampleSentence": "The bee makes honey.",
-    "emoji": "🐝"
+    "emoji": "🐝",
+    "definition": "A small insect that makes honey."
   },
   {
     "english": "mouse",
@@ -189,7 +212,8 @@
     "category": "animals",
     "imagePath": "assets/images/animals/mouse.png",
     "exampleSentence": "The mouse is very small.",
-    "emoji": "🐭"
+    "emoji": "🐭",
+    "definition": "A tiny animal that likes cheese."
   },
   {
     "english": "apple",
@@ -197,7 +221,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/apple.png",
     "exampleSentence": "I eat a red apple.",
-    "emoji": "🍎"
+    "emoji": "🍎",
+    "definition": "A round red or green fruit."
   },
   {
     "english": "banana",
@@ -205,7 +230,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/banana.png",
     "exampleSentence": "The banana is yellow.",
-    "emoji": "🍌"
+    "emoji": "🍌",
+    "definition": "A long yellow fruit."
   },
   {
     "english": "orange",
@@ -213,7 +239,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/orange.png",
     "exampleSentence": "I drink orange juice.",
-    "emoji": "🍊"
+    "emoji": "🍊",
+    "definition": "A round fruit. We make juice from it."
   },
   {
     "english": "grape",
@@ -221,7 +248,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/grape.png",
     "exampleSentence": "This grape is sweet.",
-    "emoji": "🍇"
+    "emoji": "🍇",
+    "definition": "A small round fruit. It grows in bunches."
   },
   {
     "english": "strawberry",
@@ -229,7 +257,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/strawberry.png",
     "exampleSentence": "I love strawberry cake.",
-    "emoji": "🍓"
+    "emoji": "🍓",
+    "definition": "A small red fruit with tiny seeds outside."
   },
   {
     "english": "cherry",
@@ -237,7 +266,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/cherry.png",
     "exampleSentence": "The cherry is small and red.",
-    "emoji": "🍒"
+    "emoji": "🍒",
+    "definition": "A small red fruit with a stone inside."
   },
   {
     "english": "watermelon",
@@ -245,7 +275,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/watermelon.png",
     "exampleSentence": "We eat watermelon in summer.",
-    "emoji": "🍉"
+    "emoji": "🍉",
+    "definition": "A big green fruit. It is red inside."
   },
   {
     "english": "pear",
@@ -253,7 +284,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/pear.png",
     "exampleSentence": "The pear is green.",
-    "emoji": "🍐"
+    "emoji": "🍐",
+    "definition": "A sweet fruit. It is round at the bottom."
   },
   {
     "english": "lemon",
@@ -261,7 +293,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/lemon.png",
     "exampleSentence": "The lemon is sour.",
-    "emoji": "🍋"
+    "emoji": "🍋",
+    "definition": "A sour yellow fruit."
   },
   {
     "english": "peach",
@@ -269,7 +302,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/peach.png",
     "exampleSentence": "The peach is soft.",
-    "emoji": "🍑"
+    "emoji": "🍑",
+    "definition": "A soft fruit with fuzzy skin."
   },
   {
     "english": "pineapple",
@@ -277,7 +311,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/pineapple.png",
     "exampleSentence": "The pineapple is big.",
-    "emoji": "🍍"
+    "emoji": "🍍",
+    "definition": "A big fruit with spiky leaves on top."
   },
   {
     "english": "kiwi",
@@ -285,7 +320,8 @@
     "category": "fruits",
     "imagePath": "assets/images/fruits/kiwi.png",
     "exampleSentence": "The kiwi is green inside.",
-    "emoji": "🥝"
+    "emoji": "🥝",
+    "definition": "A small brown fruit. It is green inside."
   },
   {
     "english": "bread",
@@ -293,7 +329,8 @@
     "category": "food",
     "imagePath": "assets/images/food/bread.png",
     "exampleSentence": "Mom buys fresh bread.",
-    "emoji": "🍞"
+    "emoji": "🍞",
+    "definition": "We make sandwiches with it."
   },
   {
     "english": "cheese",
@@ -301,7 +338,8 @@
     "category": "food",
     "imagePath": "assets/images/food/cheese.png",
     "exampleSentence": "I like white cheese.",
-    "emoji": "🧀"
+    "emoji": "🧀",
+    "definition": "A food made from milk. Mice love it."
   },
   {
     "english": "egg",
@@ -309,7 +347,8 @@
     "category": "food",
     "imagePath": "assets/images/food/egg.png",
     "exampleSentence": "I eat an egg for breakfast.",
-    "emoji": "🥚"
+    "emoji": "🥚",
+    "definition": "Chickens lay it."
   },
   {
     "english": "milk",
@@ -317,7 +356,8 @@
     "category": "food",
     "imagePath": "assets/images/food/milk.png",
     "exampleSentence": "I drink a glass of milk.",
-    "emoji": "🥛"
+    "emoji": "🥛",
+    "definition": "A white drink. Cows give it."
   },
   {
     "english": "water",
@@ -325,7 +365,8 @@
     "category": "food",
     "imagePath": "assets/images/food/water.png",
     "exampleSentence": "Drink some water, please.",
-    "emoji": "💧"
+    "emoji": "💧",
+    "definition": "We drink it when we are thirsty."
   },
   {
     "english": "cake",
@@ -333,7 +374,8 @@
     "category": "food",
     "imagePath": "assets/images/food/cake.png",
     "exampleSentence": "We have a birthday cake.",
-    "emoji": "🎂"
+    "emoji": "🎂",
+    "definition": "A sweet food for birthdays."
   },
   {
     "english": "pizza",
@@ -341,7 +383,8 @@
     "category": "food",
     "imagePath": "assets/images/food/pizza.png",
     "exampleSentence": "We eat pizza on Friday.",
-    "emoji": "🍕"
+    "emoji": "🍕",
+    "definition": "A round food with cheese and tomato on top."
   },
   {
     "english": "soup",
@@ -349,7 +392,8 @@
     "category": "food",
     "imagePath": "assets/images/food/soup.png",
     "exampleSentence": "The soup is hot.",
-    "emoji": "🍲"
+    "emoji": "🍲",
+    "definition": "A hot food we eat with a spoon."
   },
   {
     "english": "honey",
@@ -357,7 +401,8 @@
     "category": "food",
     "imagePath": "assets/images/food/honey.png",
     "exampleSentence": "Honey is very sweet.",
-    "emoji": "🍯"
+    "emoji": "🍯",
+    "definition": "A sweet food that bees make."
   },
   {
     "english": "ice cream",
@@ -365,7 +410,8 @@
     "category": "food",
     "imagePath": "assets/images/food/ice_cream.png",
     "exampleSentence": "I want ice cream!",
-    "emoji": "🍦"
+    "emoji": "🍦",
+    "definition": "A cold sweet food for hot days."
   },
   {
     "english": "carrot",
@@ -373,7 +419,8 @@
     "category": "food",
     "imagePath": "assets/images/food/carrot.png",
     "exampleSentence": "The carrot is orange.",
-    "emoji": "🥕"
+    "emoji": "🥕",
+    "definition": "An orange vegetable. Rabbits love it."
   },
   {
     "english": "tomato",
@@ -381,7 +428,8 @@
     "category": "food",
     "imagePath": "assets/images/food/tomato.png",
     "exampleSentence": "The tomato is red.",
-    "emoji": "🍅"
+    "emoji": "🍅",
+    "definition": "A red vegetable for salads."
   },
   {
     "english": "cookie",
@@ -389,7 +437,8 @@
     "category": "food",
     "imagePath": "assets/images/food/cookie.png",
     "exampleSentence": "Can I have a cookie?",
-    "emoji": "🍪"
+    "emoji": "🍪",
+    "definition": "A small sweet snack. It is round and flat."
   },
   {
     "english": "red",
@@ -397,7 +446,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/red.png",
     "exampleSentence": "My ball is red.",
-    "emoji": "🔴"
+    "emoji": "🔴",
+    "definition": "The color of a strawberry."
   },
   {
     "english": "blue",
@@ -405,7 +455,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/blue.png",
     "exampleSentence": "The sky is blue.",
-    "emoji": "🔵"
+    "emoji": "🔵",
+    "definition": "The color of the sky."
   },
   {
     "english": "green",
@@ -413,7 +464,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/green.png",
     "exampleSentence": "The grass is green.",
-    "emoji": "🟢"
+    "emoji": "🟢",
+    "definition": "The color of grass."
   },
   {
     "english": "yellow",
@@ -421,7 +473,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/yellow.png",
     "exampleSentence": "The sun is yellow.",
-    "emoji": "🟡"
+    "emoji": "🟡",
+    "definition": "The color of a banana."
   },
   {
     "english": "purple",
@@ -429,7 +482,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/purple.png",
     "exampleSentence": "I have a purple dress.",
-    "emoji": "🟣"
+    "emoji": "🟣",
+    "definition": "The color of grapes."
   },
   {
     "english": "brown",
@@ -437,7 +491,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/brown.png",
     "exampleSentence": "The bear is brown.",
-    "emoji": "🟤"
+    "emoji": "🟤",
+    "definition": "The color of chocolate."
   },
   {
     "english": "black",
@@ -445,7 +500,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/black.png",
     "exampleSentence": "The night is black.",
-    "emoji": "⚫"
+    "emoji": "⚫",
+    "definition": "The color of the night sky."
   },
   {
     "english": "white",
@@ -453,7 +509,8 @@
     "category": "colors",
     "imagePath": "assets/images/colors/white.png",
     "exampleSentence": "Snow is white.",
-    "emoji": "⚪"
+    "emoji": "⚪",
+    "definition": "The color of snow and milk."
   },
   {
     "english": "one",
@@ -461,7 +518,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/one.png",
     "exampleSentence": "I have one nose.",
-    "emoji": "1️⃣"
+    "emoji": "1️⃣",
+    "definition": "The number 1."
   },
   {
     "english": "two",
@@ -469,7 +527,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/two.png",
     "exampleSentence": "I have two eyes.",
-    "emoji": "2️⃣"
+    "emoji": "2️⃣",
+    "definition": "The number 2."
   },
   {
     "english": "three",
@@ -477,7 +536,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/three.png",
     "exampleSentence": "I see three birds.",
-    "emoji": "3️⃣"
+    "emoji": "3️⃣",
+    "definition": "The number 3."
   },
   {
     "english": "four",
@@ -485,7 +545,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/four.png",
     "exampleSentence": "A cat has four legs.",
-    "emoji": "4️⃣"
+    "emoji": "4️⃣",
+    "definition": "The number 4."
   },
   {
     "english": "five",
@@ -493,7 +554,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/five.png",
     "exampleSentence": "I have five fingers.",
-    "emoji": "5️⃣"
+    "emoji": "5️⃣",
+    "definition": "The number 5."
   },
   {
     "english": "six",
@@ -501,15 +563,17 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/six.png",
     "exampleSentence": "I am six years old.",
-    "emoji": "6️⃣"
+    "emoji": "6️⃣",
+    "definition": "The number 6."
   },
   {
     "english": "seven",
     "turkish": "yedi",
     "category": "numbers",
     "imagePath": "assets/images/numbers/seven.png",
-    "exampleSentence": "There are seven days in a week.",
-    "emoji": "7️⃣"
+    "exampleSentence": "A week has seven days.",
+    "emoji": "7️⃣",
+    "definition": "The number 7."
   },
   {
     "english": "eight",
@@ -517,7 +581,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/eight.png",
     "exampleSentence": "A spider has eight legs.",
-    "emoji": "8️⃣"
+    "emoji": "8️⃣",
+    "definition": "The number 8."
   },
   {
     "english": "nine",
@@ -525,7 +590,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/nine.png",
     "exampleSentence": "I sleep at nine.",
-    "emoji": "9️⃣"
+    "emoji": "9️⃣",
+    "definition": "The number 9."
   },
   {
     "english": "ten",
@@ -533,7 +599,8 @@
     "category": "numbers",
     "imagePath": "assets/images/numbers/ten.png",
     "exampleSentence": "I can count to ten.",
-    "emoji": "🔟"
+    "emoji": "🔟",
+    "definition": "The number 10."
   },
   {
     "english": "eye",
@@ -541,7 +608,8 @@
     "category": "body",
     "imagePath": "assets/images/body/eye.png",
     "exampleSentence": "Close your eye.",
-    "emoji": "👁️"
+    "emoji": "👁️",
+    "definition": "We see with it."
   },
   {
     "english": "ear",
@@ -549,7 +617,8 @@
     "category": "body",
     "imagePath": "assets/images/body/ear.png",
     "exampleSentence": "I hear with my ear.",
-    "emoji": "👂"
+    "emoji": "👂",
+    "definition": "We hear with it."
   },
   {
     "english": "nose",
@@ -557,7 +626,8 @@
     "category": "body",
     "imagePath": "assets/images/body/nose.png",
     "exampleSentence": "My nose is small.",
-    "emoji": "👃"
+    "emoji": "👃",
+    "definition": "We smell with it."
   },
   {
     "english": "mouth",
@@ -565,7 +635,8 @@
     "category": "body",
     "imagePath": "assets/images/body/mouth.png",
     "exampleSentence": "Open your mouth.",
-    "emoji": "👄"
+    "emoji": "👄",
+    "definition": "We eat and talk with it."
   },
   {
     "english": "hand",
@@ -573,7 +644,8 @@
     "category": "body",
     "imagePath": "assets/images/body/hand.png",
     "exampleSentence": "Wash your hand.",
-    "emoji": "✋"
+    "emoji": "✋",
+    "definition": "It has five fingers."
   },
   {
     "english": "foot",
@@ -581,7 +653,8 @@
     "category": "body",
     "imagePath": "assets/images/body/foot.png",
     "exampleSentence": "My foot is cold.",
-    "emoji": "🦶"
+    "emoji": "🦶",
+    "definition": "We put a shoe on it."
   },
   {
     "english": "leg",
@@ -589,7 +662,8 @@
     "category": "body",
     "imagePath": "assets/images/body/leg.png",
     "exampleSentence": "I stand on one leg.",
-    "emoji": "🦵"
+    "emoji": "🦵",
+    "definition": "We walk and run with it."
   },
   {
     "english": "arm",
@@ -597,7 +671,8 @@
     "category": "body",
     "imagePath": "assets/images/body/arm.png",
     "exampleSentence": "My arm is strong.",
-    "emoji": "💪"
+    "emoji": "💪",
+    "definition": "It is between your shoulder and hand."
   },
   {
     "english": "tooth",
@@ -605,7 +680,8 @@
     "category": "body",
     "imagePath": "assets/images/body/tooth.png",
     "exampleSentence": "I lost a tooth.",
-    "emoji": "🦷"
+    "emoji": "🦷",
+    "definition": "It is white and in your mouth. We brush it."
   },
   {
     "english": "tongue",
@@ -613,7 +689,8 @@
     "category": "body",
     "imagePath": "assets/images/body/tongue.png",
     "exampleSentence": "Show me your tongue.",
-    "emoji": "👅"
+    "emoji": "👅",
+    "definition": "It is pink and in your mouth. We taste with it."
   },
   {
     "english": "shirt",
@@ -621,7 +698,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/shirt.png",
     "exampleSentence": "Dad has a white shirt.",
-    "emoji": "👕"
+    "emoji": "👕",
+    "definition": "We wear it on the top of our body."
   },
   {
     "english": "dress",
@@ -629,7 +707,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/dress.png",
     "exampleSentence": "Her dress is pink.",
-    "emoji": "👗"
+    "emoji": "👗",
+    "definition": "Girls and women wear it. It is long."
   },
   {
     "english": "pants",
@@ -637,7 +716,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/pants.png",
     "exampleSentence": "My pants are blue.",
-    "emoji": "👖"
+    "emoji": "👖",
+    "definition": "We wear them on our legs."
   },
   {
     "english": "coat",
@@ -645,7 +725,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/coat.png",
     "exampleSentence": "Wear your coat, it is cold.",
-    "emoji": "🧥"
+    "emoji": "🧥",
+    "definition": "We wear it outside when it is cold."
   },
   {
     "english": "scarf",
@@ -653,7 +734,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/scarf.png",
     "exampleSentence": "My scarf is warm.",
-    "emoji": "🧣"
+    "emoji": "🧣",
+    "definition": "We wear it around our neck in winter."
   },
   {
     "english": "gloves",
@@ -661,7 +743,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/gloves.png",
     "exampleSentence": "I wear gloves in winter.",
-    "emoji": "🧤"
+    "emoji": "🧤",
+    "definition": "We wear them on our hands in winter."
   },
   {
     "english": "shoe",
@@ -669,7 +752,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/shoe.png",
     "exampleSentence": "Put on your shoe.",
-    "emoji": "👟"
+    "emoji": "👟",
+    "definition": "We wear it on our foot."
   },
   {
     "english": "sock",
@@ -677,7 +761,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/sock.png",
     "exampleSentence": "I have one red sock.",
-    "emoji": "🧦"
+    "emoji": "🧦",
+    "definition": "We wear it on our foot, under a shoe."
   },
   {
     "english": "hat",
@@ -685,7 +770,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/hat.png",
     "exampleSentence": "I like my new hat.",
-    "emoji": "🧢"
+    "emoji": "🧢",
+    "definition": "We wear it on our head."
   },
   {
     "english": "glasses",
@@ -693,7 +779,8 @@
     "category": "clothes",
     "imagePath": "assets/images/clothes/glasses.png",
     "exampleSentence": "Grandpa wears glasses.",
-    "emoji": "👓"
+    "emoji": "👓",
+    "definition": "We wear them on our eyes to see better."
   },
   {
     "english": "house",
@@ -701,7 +788,8 @@
     "category": "home",
     "imagePath": "assets/images/home/house.png",
     "exampleSentence": "This is my house.",
-    "emoji": "🏠"
+    "emoji": "🏠",
+    "definition": "A building where a family lives."
   },
   {
     "english": "chair",
@@ -709,7 +797,8 @@
     "category": "home",
     "imagePath": "assets/images/home/chair.png",
     "exampleSentence": "Sit on the chair.",
-    "emoji": "🪑"
+    "emoji": "🪑",
+    "definition": "We sit on it."
   },
   {
     "english": "bed",
@@ -717,7 +806,8 @@
     "category": "home",
     "imagePath": "assets/images/home/bed.png",
     "exampleSentence": "I sleep in my bed.",
-    "emoji": "🛏️"
+    "emoji": "🛏️",
+    "definition": "We sleep in it at night."
   },
   {
     "english": "sofa",
@@ -725,7 +815,8 @@
     "category": "home",
     "imagePath": "assets/images/home/sofa.png",
     "exampleSentence": "We sit on the sofa.",
-    "emoji": "🛋️"
+    "emoji": "🛋️",
+    "definition": "A long soft seat for two or more people."
   },
   {
     "english": "door",
@@ -733,7 +824,8 @@
     "category": "home",
     "imagePath": "assets/images/home/door.png",
     "exampleSentence": "Please open the door.",
-    "emoji": "🚪"
+    "emoji": "🚪",
+    "definition": "We open it to go in or out."
   },
   {
     "english": "window",
@@ -741,7 +833,8 @@
     "category": "home",
     "imagePath": "assets/images/home/window.png",
     "exampleSentence": "Look out the window.",
-    "emoji": "🪟"
+    "emoji": "🪟",
+    "definition": "Glass in a wall. We look outside through it."
   },
   {
     "english": "lamp",
@@ -749,7 +842,8 @@
     "category": "home",
     "imagePath": "assets/images/home/lamp.png",
     "exampleSentence": "Turn on the lamp.",
-    "emoji": "💡"
+    "emoji": "💡",
+    "definition": "It gives us light."
   },
   {
     "english": "clock",
@@ -757,7 +851,8 @@
     "category": "home",
     "imagePath": "assets/images/home/clock.png",
     "exampleSentence": "The clock says eight.",
-    "emoji": "⏰"
+    "emoji": "⏰",
+    "definition": "It shows the time."
   },
   {
     "english": "key",
@@ -765,7 +860,8 @@
     "category": "home",
     "imagePath": "assets/images/home/key.png",
     "exampleSentence": "Mom has the key.",
-    "emoji": "🔑"
+    "emoji": "🔑",
+    "definition": "We open a door with it."
   },
   {
     "english": "phone",
@@ -773,7 +869,8 @@
     "category": "home",
     "imagePath": "assets/images/home/phone.png",
     "exampleSentence": "Dad is on the phone.",
-    "emoji": "📱"
+    "emoji": "📱",
+    "definition": "We call people with it."
   },
   {
     "english": "television",
@@ -781,7 +878,8 @@
     "category": "home",
     "imagePath": "assets/images/home/television.png",
     "exampleSentence": "We watch television together.",
-    "emoji": "📺"
+    "emoji": "📺",
+    "definition": "We watch cartoons on it."
   },
   {
     "english": "umbrella",
@@ -789,7 +887,8 @@
     "category": "home",
     "imagePath": "assets/images/home/umbrella.png",
     "exampleSentence": "Take your umbrella, it rains.",
-    "emoji": "☂️"
+    "emoji": "☂️",
+    "definition": "It keeps us dry in the rain."
   },
   {
     "english": "basket",
@@ -797,7 +896,8 @@
     "category": "home",
     "imagePath": "assets/images/home/basket.png",
     "exampleSentence": "The apples are in the basket.",
-    "emoji": "🧺"
+    "emoji": "🧺",
+    "definition": "We carry things in it."
   },
   {
     "english": "broom",
@@ -805,7 +905,8 @@
     "category": "home",
     "imagePath": "assets/images/home/broom.png",
     "exampleSentence": "Clean the floor with a broom.",
-    "emoji": "🧹"
+    "emoji": "🧹",
+    "definition": "We clean the floor with it."
   },
   {
     "english": "cup",
@@ -813,7 +914,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/cup.png",
     "exampleSentence": "I drink milk from a cup.",
-    "emoji": "☕"
+    "emoji": "☕",
+    "definition": "We drink tea from it."
   },
   {
     "english": "spoon",
@@ -821,7 +923,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/spoon.png",
     "exampleSentence": "I eat soup with a spoon.",
-    "emoji": "🥄"
+    "emoji": "🥄",
+    "definition": "We eat soup with it."
   },
   {
     "english": "fork",
@@ -829,7 +932,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/fork.png",
     "exampleSentence": "Take a fork, please.",
-    "emoji": "🍴"
+    "emoji": "🍴",
+    "definition": "We eat with it. It has points."
   },
   {
     "english": "plate",
@@ -837,7 +941,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/plate.png",
     "exampleSentence": "My plate is empty.",
-    "emoji": "🍽️"
+    "emoji": "🍽️",
+    "definition": "We put food on it."
   },
   {
     "english": "bowl",
@@ -845,7 +950,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/bowl.png",
     "exampleSentence": "The bowl is full.",
-    "emoji": "🥣"
+    "emoji": "🥣",
+    "definition": "A round dish for soup or cereal."
   },
   {
     "english": "bottle",
@@ -853,7 +959,8 @@
     "category": "kitchen",
     "imagePath": "assets/images/kitchen/bottle.png",
     "exampleSentence": "The bottle is full of water.",
-    "emoji": "🍼"
+    "emoji": "🍼",
+    "definition": "We keep water or milk in it."
   },
   {
     "english": "toothbrush",
@@ -861,7 +968,8 @@
     "category": "bathroom",
     "imagePath": "assets/images/bathroom/toothbrush.png",
     "exampleSentence": "I use my toothbrush.",
-    "emoji": "🪥"
+    "emoji": "🪥",
+    "definition": "We clean our teeth with it."
   },
   {
     "english": "soap",
@@ -869,7 +977,8 @@
     "category": "bathroom",
     "imagePath": "assets/images/bathroom/soap.png",
     "exampleSentence": "Wash your hands with soap.",
-    "emoji": "🧼"
+    "emoji": "🧼",
+    "definition": "We wash our hands with it."
   },
   {
     "english": "towel",
@@ -877,7 +986,8 @@
     "category": "bathroom",
     "imagePath": "assets/images/bathroom/towel.png",
     "exampleSentence": "Dry your face with a towel.",
-    "emoji": "🛁"
+    "emoji": "🛁",
+    "definition": "We dry our body with it."
   },
   {
     "english": "bath",
@@ -885,7 +995,8 @@
     "category": "bathroom",
     "imagePath": "assets/images/bathroom/bath.png",
     "exampleSentence": "I take a bath every night.",
-    "emoji": "🛀"
+    "emoji": "🛀",
+    "definition": "We sit in warm water to get clean."
   },
   {
     "english": "shower",
@@ -893,7 +1004,8 @@
     "category": "bathroom",
     "imagePath": "assets/images/bathroom/shower.png",
     "exampleSentence": "I sing in the shower.",
-    "emoji": "🚿"
+    "emoji": "🚿",
+    "definition": "Water comes down on us to get clean."
   },
   {
     "english": "book",
@@ -901,7 +1013,8 @@
     "category": "school",
     "imagePath": "assets/images/school/book.png",
     "exampleSentence": "I read a book.",
-    "emoji": "📖"
+    "emoji": "📖",
+    "definition": "It has pages with stories. We read it."
   },
   {
     "english": "pencil",
@@ -909,7 +1022,8 @@
     "category": "school",
     "imagePath": "assets/images/school/pencil.png",
     "exampleSentence": "I draw with a pencil.",
-    "emoji": "✏️"
+    "emoji": "✏️",
+    "definition": "We write and draw with it."
   },
   {
     "english": "bag",
@@ -917,7 +1031,8 @@
     "category": "school",
     "imagePath": "assets/images/school/bag.png",
     "exampleSentence": "My bag is blue.",
-    "emoji": "🎒"
+    "emoji": "🎒",
+    "definition": "We carry our books in it."
   },
   {
     "english": "notebook",
@@ -925,7 +1040,8 @@
     "category": "school",
     "imagePath": "assets/images/school/notebook.png",
     "exampleSentence": "I write in my notebook.",
-    "emoji": "📓"
+    "emoji": "📓",
+    "definition": "It has empty pages. We write in it."
   },
   {
     "english": "crayon",
@@ -933,7 +1049,8 @@
     "category": "school",
     "imagePath": "assets/images/school/crayon.png",
     "exampleSentence": "I color with a crayon.",
-    "emoji": "🖍️"
+    "emoji": "🖍️",
+    "definition": "A colorful stick. We color pictures with it."
   },
   {
     "english": "scissors",
@@ -941,7 +1058,8 @@
     "category": "school",
     "imagePath": "assets/images/school/scissors.png",
     "exampleSentence": "Cut the paper with scissors.",
-    "emoji": "✂️"
+    "emoji": "✂️",
+    "definition": "We cut paper with them."
   },
   {
     "english": "ruler",
@@ -949,7 +1067,8 @@
     "category": "school",
     "imagePath": "assets/images/school/ruler.png",
     "exampleSentence": "My ruler is long.",
-    "emoji": "📏"
+    "emoji": "📏",
+    "definition": "We draw straight lines with it."
   },
   {
     "english": "paper",
@@ -957,7 +1076,8 @@
     "category": "school",
     "imagePath": "assets/images/school/paper.png",
     "exampleSentence": "I need some paper.",
-    "emoji": "📄"
+    "emoji": "📄",
+    "definition": "It is thin and white. We write on it."
   },
   {
     "english": "teacher",
@@ -965,7 +1085,8 @@
     "category": "school",
     "imagePath": "assets/images/school/teacher.png",
     "exampleSentence": "My teacher is kind.",
-    "emoji": "🧑‍🏫"
+    "emoji": "🧑‍🏫",
+    "definition": "A person who helps us learn at school."
   },
   {
     "english": "computer",
@@ -973,7 +1094,8 @@
     "category": "school",
     "imagePath": "assets/images/school/computer.png",
     "exampleSentence": "We use a computer at school.",
-    "emoji": "💻"
+    "emoji": "💻",
+    "definition": "A machine with a screen and keyboard."
   },
   {
     "english": "car",
@@ -981,7 +1103,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/car.png",
     "exampleSentence": "Dad drives a car.",
-    "emoji": "🚗"
+    "emoji": "🚗",
+    "definition": "It has four wheels. A family drives it."
   },
   {
     "english": "bus",
@@ -989,7 +1112,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/bus.png",
     "exampleSentence": "I go to school by bus.",
-    "emoji": "🚌"
+    "emoji": "🚌",
+    "definition": "A long vehicle for many people."
   },
   {
     "english": "bike",
@@ -997,7 +1121,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/bike.png",
     "exampleSentence": "I can ride a bike.",
-    "emoji": "🚲"
+    "emoji": "🚲",
+    "definition": "It has two wheels. We ride it with our feet."
   },
   {
     "english": "train",
@@ -1005,7 +1130,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/train.png",
     "exampleSentence": "The train is very long.",
-    "emoji": "🚂"
+    "emoji": "🚂",
+    "definition": "It is long and goes on tracks."
   },
   {
     "english": "plane",
@@ -1013,7 +1139,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/plane.png",
     "exampleSentence": "The plane flies high.",
-    "emoji": "✈️"
+    "emoji": "✈️",
+    "definition": "It flies in the sky and carries people."
   },
   {
     "english": "boat",
@@ -1021,7 +1148,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/boat.png",
     "exampleSentence": "The boat is on the lake.",
-    "emoji": "⛵"
+    "emoji": "⛵",
+    "definition": "A small vehicle on water."
   },
   {
     "english": "ship",
@@ -1029,7 +1157,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/ship.png",
     "exampleSentence": "The ship is very big.",
-    "emoji": "🚢"
+    "emoji": "🚢",
+    "definition": "A very big vehicle on the sea."
   },
   {
     "english": "truck",
@@ -1037,7 +1166,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/truck.png",
     "exampleSentence": "The truck is red.",
-    "emoji": "🚚"
+    "emoji": "🚚",
+    "definition": "A big vehicle that carries heavy things."
   },
   {
     "english": "taxi",
@@ -1045,7 +1175,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/taxi.png",
     "exampleSentence": "The taxi is yellow.",
-    "emoji": "🚕"
+    "emoji": "🚕",
+    "definition": "A yellow car. We pay to ride in it."
   },
   {
     "english": "helicopter",
@@ -1053,7 +1184,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/helicopter.png",
     "exampleSentence": "The helicopter is loud.",
-    "emoji": "🚁"
+    "emoji": "🚁",
+    "definition": "It flies. It has big blades on top."
   },
   {
     "english": "rocket",
@@ -1061,7 +1193,8 @@
     "category": "vehicles",
     "imagePath": "assets/images/vehicles/rocket.png",
     "exampleSentence": "The rocket goes to space.",
-    "emoji": "🚀"
+    "emoji": "🚀",
+    "definition": "It flies to the moon and stars."
   },
   {
     "english": "sun",
@@ -1069,7 +1202,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/sun.png",
     "exampleSentence": "The sun is hot.",
-    "emoji": "☀️"
+    "emoji": "☀️",
+    "definition": "It is hot and bright in the day sky."
   },
   {
     "english": "moon",
@@ -1077,7 +1211,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/moon.png",
     "exampleSentence": "I can see the moon.",
-    "emoji": "🌙"
+    "emoji": "🌙",
+    "definition": "We see it in the sky at night."
   },
   {
     "english": "star",
@@ -1085,7 +1220,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/star.png",
     "exampleSentence": "Look at that star!",
-    "emoji": "⭐"
+    "emoji": "⭐",
+    "definition": "A tiny light in the night sky."
   },
   {
     "english": "cloud",
@@ -1093,7 +1229,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/cloud.png",
     "exampleSentence": "The cloud is white.",
-    "emoji": "☁️"
+    "emoji": "☁️",
+    "definition": "It is white and fluffy in the sky."
   },
   {
     "english": "rain",
@@ -1101,7 +1238,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/rain.png",
     "exampleSentence": "I like the rain.",
-    "emoji": "🌧️"
+    "emoji": "🌧️",
+    "definition": "Water that falls from the sky."
   },
   {
     "english": "snow",
@@ -1109,7 +1247,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/snow.png",
     "exampleSentence": "We play in the snow.",
-    "emoji": "❄️"
+    "emoji": "❄️",
+    "definition": "Cold and white. It falls in winter."
   },
   {
     "english": "rainbow",
@@ -1117,7 +1256,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/rainbow.png",
     "exampleSentence": "The rainbow has many colors.",
-    "emoji": "🌈"
+    "emoji": "🌈",
+    "definition": "Colors in the sky after rain."
   },
   {
     "english": "tree",
@@ -1125,7 +1265,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/tree.png",
     "exampleSentence": "The tree is tall.",
-    "emoji": "🌳"
+    "emoji": "🌳",
+    "definition": "A tall plant with leaves and branches."
   },
   {
     "english": "flower",
@@ -1133,7 +1274,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/flower.png",
     "exampleSentence": "This flower smells nice.",
-    "emoji": "🌸"
+    "emoji": "🌸",
+    "definition": "A pretty plant. Bees love it."
   },
   {
     "english": "leaf",
@@ -1141,7 +1283,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/leaf.png",
     "exampleSentence": "The leaf is falling.",
-    "emoji": "🍃"
+    "emoji": "🍃",
+    "definition": "A small green part of a tree."
   },
   {
     "english": "sea",
@@ -1149,7 +1292,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/sea.png",
     "exampleSentence": "We swim in the sea.",
-    "emoji": "🌊"
+    "emoji": "🌊",
+    "definition": "A lot of salty water. Fish live in it."
   },
   {
     "english": "mountain",
@@ -1157,7 +1301,8 @@
     "category": "nature",
     "imagePath": "assets/images/nature/mountain.png",
     "exampleSentence": "The mountain is very high.",
-    "emoji": "⛰️"
+    "emoji": "⛰️",
+    "definition": "A very big and high hill."
   },
   {
     "english": "mother",
@@ -1165,7 +1310,8 @@
     "category": "family",
     "imagePath": "assets/images/family/mother.png",
     "exampleSentence": "My mother loves me.",
-    "emoji": "👩"
+    "emoji": "👩",
+    "definition": "Your mom."
   },
   {
     "english": "father",
@@ -1173,7 +1319,8 @@
     "category": "family",
     "imagePath": "assets/images/family/father.png",
     "exampleSentence": "My father is tall.",
-    "emoji": "👨"
+    "emoji": "👨",
+    "definition": "Your dad."
   },
   {
     "english": "baby",
@@ -1181,7 +1328,8 @@
     "category": "family",
     "imagePath": "assets/images/family/baby.png",
     "exampleSentence": "The baby is sleeping.",
-    "emoji": "👶"
+    "emoji": "👶",
+    "definition": "A very young child."
   },
   {
     "english": "sister",
@@ -1189,7 +1337,8 @@
     "category": "family",
     "imagePath": "assets/images/family/sister.png",
     "exampleSentence": "My sister is five.",
-    "emoji": "👧"
+    "emoji": "👧",
+    "definition": "A girl with the same mom and dad as you."
   },
   {
     "english": "brother",
@@ -1197,7 +1346,8 @@
     "category": "family",
     "imagePath": "assets/images/family/brother.png",
     "exampleSentence": "My brother plays football.",
-    "emoji": "👦"
+    "emoji": "👦",
+    "definition": "A boy with the same mom and dad as you."
   },
   {
     "english": "grandma",
@@ -1205,7 +1355,8 @@
     "category": "family",
     "imagePath": "assets/images/family/grandma.png",
     "exampleSentence": "Grandma makes cookies.",
-    "emoji": "👵"
+    "emoji": "👵",
+    "definition": "Your mom's or dad's mother."
   },
   {
     "english": "grandpa",
@@ -1213,7 +1364,8 @@
     "category": "family",
     "imagePath": "assets/images/family/grandpa.png",
     "exampleSentence": "Grandpa tells stories.",
-    "emoji": "👴"
+    "emoji": "👴",
+    "definition": "Your mom's or dad's father."
   },
   {
     "english": "family",
@@ -1221,7 +1373,8 @@
     "category": "family",
     "imagePath": "assets/images/family/family.png",
     "exampleSentence": "I love my family.",
-    "emoji": "👨‍👩‍👧"
+    "emoji": "👨‍👩‍👧",
+    "definition": "Mom, dad, brothers and sisters together."
   },
   {
     "english": "ball",
@@ -1229,7 +1382,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/ball.png",
     "exampleSentence": "Kick the ball!",
-    "emoji": "⚽"
+    "emoji": "⚽",
+    "definition": "A round toy. We kick or throw it."
   },
   {
     "english": "teddy bear",
@@ -1237,7 +1391,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/teddy_bear.png",
     "exampleSentence": "My teddy bear is soft.",
-    "emoji": "🧸"
+    "emoji": "🧸",
+    "definition": "A soft toy animal. We hug it."
   },
   {
     "english": "kite",
@@ -1245,7 +1400,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/kite.png",
     "exampleSentence": "The kite flies in the sky.",
-    "emoji": "🪁"
+    "emoji": "🪁",
+    "definition": "A toy that flies in the wind."
   },
   {
     "english": "balloon",
@@ -1253,7 +1409,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/balloon.png",
     "exampleSentence": "I have a red balloon.",
-    "emoji": "🎈"
+    "emoji": "🎈",
+    "definition": "We fill it with air for parties."
   },
   {
     "english": "drum",
@@ -1261,7 +1418,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/drum.png",
     "exampleSentence": "I play the drum.",
-    "emoji": "🥁"
+    "emoji": "🥁",
+    "definition": "We hit it to make music. Boom boom!"
   },
   {
     "english": "puzzle",
@@ -1269,7 +1427,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/puzzle.png",
     "exampleSentence": "We do a puzzle together.",
-    "emoji": "🧩"
+    "emoji": "🧩",
+    "definition": "A game with pieces that fit together."
   },
   {
     "english": "robot",
@@ -1277,7 +1436,8 @@
     "category": "toys",
     "imagePath": "assets/images/toys/robot.png",
     "exampleSentence": "My robot can walk.",
-    "emoji": "🤖"
+    "emoji": "🤖",
+    "definition": "A machine that can move like a person."
   },
   {
     "english": "doll",
@@ -1285,6 +1445,7 @@
     "category": "toys",
     "imagePath": "assets/images/toys/doll.png",
     "exampleSentence": "My doll has long hair.",
-    "emoji": "🪆"
+    "emoji": "🪆",
+    "definition": "A toy that looks like a little person."
   }
 ]

@@ -7,6 +7,7 @@ class Word {
     required this.imagePath,
     required this.exampleSentence,
     this.emoji,
+    this.definition,
   });
 
   final String english;
@@ -17,6 +18,10 @@ class Word {
 
   /// İsteğe bağlı emoji. Görsel bulunamazsa kartta bunun yerine gösterilir.
   final String? emoji;
+
+  /// İsteğe bağlı, çocuklar için basit İngilizce tanım.
+  /// "Find from definition" quizinde soru olarak gösterilir.
+  final String? definition;
 
   /// JSON verisinden [Word] oluşturur.
   ///
@@ -29,6 +34,7 @@ class Word {
       imagePath: _readString(json, 'imagePath'),
       exampleSentence: _readString(json, 'exampleSentence'),
       emoji: _readOptionalString(json, 'emoji'),
+      definition: _readOptionalString(json, 'definition'),
     );
   }
 
@@ -40,6 +46,7 @@ class Word {
       'imagePath': imagePath,
       'exampleSentence': exampleSentence,
       if (emoji != null) 'emoji': emoji,
+      if (definition != null) 'definition': definition,
     };
   }
 

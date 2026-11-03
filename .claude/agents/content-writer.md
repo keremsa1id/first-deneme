@@ -20,6 +20,7 @@ Sen 4-8 yaş arası Türk çocuklarına İngilizce öğreten bir içerik yazarı
 - `imagePath`: `assets/images/<category>/<english>.png`
 - `exampleSentence`: kelimeyi içeren basit İngilizce cümle, **en fazla 6 kelime**
 - `emoji`: kelimeyi anlatan tek bir emoji (görsel dosyası yoksa kartta bu gösterilir)
+- `definition`: çocukların anlayacağı kısa, basit İngilizce tanım ("Find from Definition" quizinde soru olur). Kelimenin kendisi tanımda **geçmemeli**.
 
 ## Örnek format
 ```json

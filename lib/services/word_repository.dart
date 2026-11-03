@@ -29,18 +29,23 @@ class WordRepository {
   final String assetPath;
 
   /// [assetPath] dosyasındaki kelimeleri yükler. [category] verilirse
-  /// yalnızca o gruptaki kelimeler döner.
+  /// yalnızca o gruptaki kelimeler, [only] verilirse yalnızca İngilizcesi
+  /// (küçük harfle) bu kümede olan kelimeler döner.
   ///
   /// Dosya boşsa veya boş bir liste içeriyorsa boş liste döner.
   /// Dosya bulunamazsa ya da JSON biçimi hatalıysa
   /// [WordRepositoryException] fırlatır.
-  Future<List<Word>> loadWords({String? category}) async {
+  Future<List<Word>> loadWords({String? category, Set<String>? only}) async {
     final List<Word> words = await _loadAll();
-    if (category == null) {
+    if (category == null && only == null) {
       return words;
     }
     return List<Word>.unmodifiable(
-      words.where((Word word) => word.category == category),
+      words.where(
+        (Word word) =>
+            (category == null || word.category == category) &&
+            (only == null || only.contains(word.english.toLowerCase())),
+      ),
     );
   }
 
@@ -93,10 +98,12 @@ class WordRepository {
   /// böylece ekran her açılışta farklı bir kelimeyle başlar.
   Future<List<Word>> loadShuffledWords({
     String? category,
+    Set<String>? only,
     Random? random,
   }) async {
     final List<Word> words =
-        List<Word>.of(await loadWords(category: category))..shuffle(random);
+        List<Word>.of(await loadWords(category: category, only: only))
+          ..shuffle(random);
     return List<Word>.unmodifiable(words);
   }
 }

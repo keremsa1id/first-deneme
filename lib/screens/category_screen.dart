@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/word.dart';
 import '../models/word_category.dart';
+import '../services/progress_store.dart';
 import '../services/word_repository.dart';
 import '../widgets/message_view.dart';
 
@@ -10,6 +11,9 @@ import '../widgets/message_view.dart';
 /// Gruplar büyük, renkli kartlar halinde dizilir. Bir gruba dokununca
 /// [builder] ile o grubun ekranı (kelimeler, cümleler veya quiz) açılır.
 /// [minWords]'ten az kelimesi olan gruplar gösterilmez.
+///
+/// Her kartta grubun kaç kelimesinin öğrenildiği ilerleme çubuğuyla
+/// gösterilir. [scoreKeyFor] verilirse o quizin en iyi skoru da yazılır.
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({
     super.key,
@@ -17,12 +21,14 @@ class CategoryScreen extends StatefulWidget {
     required this.builder,
     this.repository = const WordRepository(),
     this.minWords = 1,
+    this.scoreKeyFor,
   });
 
   final String title;
   final Widget Function(WordCategory category) builder;
   final WordRepository repository;
   final int minWords;
+  final String Function(WordCategory category)? scoreKeyFor;
 
   @override
   State<CategoryScreen> createState() => _CategoryScreenState();
@@ -42,20 +48,21 @@ class _CategoryScreenState extends State<CategoryScreen> {
   }
 
   /// Gruplar [wordCategories] sırasıyla, tanımsız gruplar en sonda.
-  List<(WordCategory, int)> _groups(List<Word> words) {
-    final Map<String, int> counts = <String, int>{};
+  List<(WordCategory, List<Word>)> _groups(List<Word> words) {
+    final Map<String, List<Word>> byId = <String, List<Word>>{};
     for (final Word word in words) {
-      counts[word.category] = (counts[word.category] ?? 0) + 1;
+      byId.putIfAbsent(word.category, () => <Word>[]).add(word);
     }
     final List<String> ids = <String>[
       for (final WordCategory category in wordCategories)
-        if (counts.containsKey(category.id)) category.id,
-      for (final String id in counts.keys)
+        if (byId.containsKey(category.id)) category.id,
+      for (final String id in byId.keys)
         if (wordCategories.every((WordCategory c) => c.id != id)) id,
     ];
-    return <(WordCategory, int)>[
+    return <(WordCategory, List<Word>)>[
       for (final String id in ids)
-        if (counts[id]! >= widget.minWords) (WordCategory.byId(id), counts[id]!),
+        if (byId[id]!.length >= widget.minWords)
+          (WordCategory.byId(id), byId[id]!),
     ];
   }
 
@@ -109,7 +116,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               );
             }
 
-            final List<(WordCategory, int)> groups =
+            final List<(WordCategory, List<Word>)> groups =
                 _groups(snapshot.data ?? const <Word>[]);
             if (groups.isEmpty) {
               return const MessageView(
@@ -118,28 +125,38 @@ class _CategoryScreenState extends State<CategoryScreen> {
               );
             }
 
-            return GridView.builder(
-              padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 260,
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 16,
-                childAspectRatio: 0.95,
-              ),
-              itemCount: groups.length,
-              itemBuilder: (BuildContext context, int index) {
-                final (WordCategory category, int count) = groups[index];
-                return _CategoryTile(
-                  category: category,
-                  wordCount: count,
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          widget.builder(category),
+            // Quizden dönünce ilerleme çubukları güncellensin.
+            return ListenableBuilder(
+              listenable: ProgressStore.instance,
+              builder: (BuildContext context, Widget? _) => GridView.builder(
+                padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 260,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                  childAspectRatio: 0.8,
+                ),
+                itemCount: groups.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final (WordCategory category, List<Word> words) =
+                      groups[index];
+                  final String? scoreKey = widget.scoreKeyFor?.call(category);
+                  return _CategoryTile(
+                    category: category,
+                    wordCount: words.length,
+                    learnedCount: ProgressStore.instance.learnedCount(words),
+                    best: scoreKey == null
+                        ? null
+                        : ProgressStore.instance.bestScore(scoreKey),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            widget.builder(category),
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             );
           },
         ),
@@ -148,21 +165,27 @@ class _CategoryScreenState extends State<CategoryScreen> {
   }
 }
 
-/// Tek bir grup kartı: büyük emoji, grup adı ve kelime sayısı.
+/// Tek bir grup kartı: büyük emoji, grup adı, öğrenme ilerlemesi ve
+/// varsa en iyi quiz skoru.
 class _CategoryTile extends StatelessWidget {
   const _CategoryTile({
     required this.category,
     required this.wordCount,
+    required this.learnedCount,
+    required this.best,
     required this.onTap,
   });
 
   final WordCategory category;
   final int wordCount;
+  final int learnedCount;
+  final QuizScore? best;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
+    final QuizScore? best = this.best;
 
     return Semantics(
       button: true,
@@ -200,12 +223,37 @@ class _CategoryTile extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                '$wordCount words',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onSurfaceVariant,
+              const SizedBox(height: 6),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: LinearProgressIndicator(
+                  value: wordCount == 0 ? 0 : learnedCount / wordCount,
+                  minHeight: 12,
+                  color: category.color,
+                  backgroundColor: category.color.withValues(alpha: 0.25),
                 ),
               ),
+              const SizedBox(height: 4),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  '$learnedCount/$wordCount learned',
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ),
+              if (best != null)
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    '⭐ Best ${best.score}/${best.total}',
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ),
             ],
           ),
         ),
