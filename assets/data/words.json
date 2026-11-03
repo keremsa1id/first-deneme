@@ -216,6 +216,96 @@
     "definition": "A tiny animal that likes cheese."
   },
   {
+    "english": "snake",
+    "turkish": "yılan",
+    "category": "animals",
+    "imagePath": "assets/images/animals/snake.png",
+    "exampleSentence": "The snake is very long.",
+    "emoji": "🐍",
+    "definition": "A long animal with no legs."
+  },
+  {
+    "english": "zebra",
+    "turkish": "zebra",
+    "category": "animals",
+    "imagePath": "assets/images/animals/zebra.png",
+    "exampleSentence": "The zebra has stripes.",
+    "emoji": "🦓",
+    "definition": "An African animal with black and white stripes."
+  },
+  {
+    "english": "camel",
+    "turkish": "deve",
+    "category": "animals",
+    "imagePath": "assets/images/animals/camel.png",
+    "exampleSentence": "The camel lives in the desert.",
+    "emoji": "🐫",
+    "definition": "A desert animal with humps on its back."
+  },
+  {
+    "english": "dolphin",
+    "turkish": "yunus",
+    "category": "animals",
+    "imagePath": "assets/images/animals/dolphin.png",
+    "exampleSentence": "The dolphin is very smart.",
+    "emoji": "🐬",
+    "definition": "A smart sea animal that loves to jump."
+  },
+  {
+    "english": "whale",
+    "turkish": "balina",
+    "category": "animals",
+    "imagePath": "assets/images/animals/whale.png",
+    "exampleSentence": "The whale is huge.",
+    "emoji": "🐳",
+    "definition": "The biggest animal in the sea."
+  },
+  {
+    "english": "snail",
+    "turkish": "salyangoz",
+    "category": "animals",
+    "imagePath": "assets/images/animals/snail.png",
+    "exampleSentence": "The snail is very slow.",
+    "emoji": "🐌",
+    "definition": "A slow animal that carries its shell."
+  },
+  {
+    "english": "spider",
+    "turkish": "örümcek",
+    "category": "animals",
+    "imagePath": "assets/images/animals/spider.png",
+    "exampleSentence": "The spider makes a web.",
+    "emoji": "🕷️",
+    "definition": "A small animal with eight legs."
+  },
+  {
+    "english": "fox",
+    "turkish": "tilki",
+    "category": "animals",
+    "imagePath": "assets/images/animals/fox.png",
+    "exampleSentence": "The fox has a red tail.",
+    "emoji": "🦊",
+    "definition": "A wild orange animal with a bushy tail."
+  },
+  {
+    "english": "ant",
+    "turkish": "karınca",
+    "category": "animals",
+    "imagePath": "assets/images/animals/ant.png",
+    "exampleSentence": "The ant is very small.",
+    "emoji": "🐜",
+    "definition": "A tiny insect that works very hard."
+  },
+  {
+    "english": "crab",
+    "turkish": "yengeç",
+    "category": "animals",
+    "imagePath": "assets/images/animals/crab.png",
+    "exampleSentence": "The crab walks sideways.",
+    "emoji": "🦀",
+    "definition": "A sea animal with two big claws."
+  },
+  {
     "english": "apple",
     "turkish": "elma",
     "category": "fruits",
@@ -322,6 +412,51 @@
     "exampleSentence": "The kiwi is green inside.",
     "emoji": "🥝",
     "definition": "A small brown fruit. It is green inside."
+  },
+  {
+    "english": "mango",
+    "turkish": "mango",
+    "category": "fruits",
+    "imagePath": "assets/images/fruits/mango.png",
+    "exampleSentence": "I like mango juice.",
+    "emoji": "🥭",
+    "definition": "A sweet yellow tropical fruit."
+  },
+  {
+    "english": "coconut",
+    "turkish": "hindistan cevizi",
+    "category": "fruits",
+    "imagePath": "assets/images/fruits/coconut.png",
+    "exampleSentence": "The coconut is hard.",
+    "emoji": "🥥",
+    "definition": "A hard brown fruit with white milk inside."
+  },
+  {
+    "english": "melon",
+    "turkish": "kavun",
+    "category": "fruits",
+    "imagePath": "assets/images/fruits/melon.png",
+    "exampleSentence": "The melon is sweet.",
+    "emoji": "🍈",
+    "definition": "A big round fruit. It is yellow or green."
+  },
+  {
+    "english": "avocado",
+    "turkish": "avokado",
+    "category": "fruits",
+    "imagePath": "assets/images/fruits/avocado.png",
+    "exampleSentence": "The avocado is green.",
+    "emoji": "🥑",
+    "definition": "A green fruit with a big seed inside."
+  },
+  {
+    "english": "blueberry",
+    "turkish": "yaban mersini",
+    "category": "fruits",
+    "imagePath": "assets/images/fruits/blueberry.png",
+    "exampleSentence": "I eat a blueberry.",
+    "emoji": "🫐",
+    "definition": "A tiny blue fruit."
   },
   {
     "english": "bread",
@@ -441,6 +576,78 @@
     "definition": "A small sweet snack. It is round and flat."
   },
   {
+    "english": "rice",
+    "turkish": "pirinç",
+    "category": "food",
+    "imagePath": "assets/images/food/rice.png",
+    "exampleSentence": "I eat rice with chicken.",
+    "emoji": "🍚",
+    "definition": "Small white grains we cook and eat."
+  },
+  {
+    "english": "salad",
+    "turkish": "salata",
+    "category": "food",
+    "imagePath": "assets/images/food/salad.png",
+    "exampleSentence": "The salad is fresh.",
+    "emoji": "🥗",
+    "definition": "Mixed vegetables in a bowl."
+  },
+  {
+    "english": "sandwich",
+    "turkish": "sandviç",
+    "category": "food",
+    "imagePath": "assets/images/food/sandwich.png",
+    "exampleSentence": "I have a sandwich for lunch.",
+    "emoji": "🥪",
+    "definition": "Bread with cheese or meat inside."
+  },
+  {
+    "english": "chocolate",
+    "turkish": "çikolata",
+    "category": "food",
+    "imagePath": "assets/images/food/chocolate.png",
+    "exampleSentence": "I love chocolate!",
+    "emoji": "🍫",
+    "definition": "A sweet brown candy."
+  },
+  {
+    "english": "juice",
+    "turkish": "meyve suyu",
+    "category": "food",
+    "imagePath": "assets/images/food/juice.png",
+    "exampleSentence": "Apple juice is sweet.",
+    "emoji": "🧃",
+    "definition": "A drink made from fruit."
+  },
+  {
+    "english": "potato",
+    "turkish": "patates",
+    "category": "food",
+    "imagePath": "assets/images/food/potato.png",
+    "exampleSentence": "The potato is brown.",
+    "emoji": "🥔",
+    "definition": "A vegetable we use for fries."
+  },
+  {
+    "english": "corn",
+    "turkish": "mısır",
+    "category": "food",
+    "imagePath": "assets/images/food/corn.png",
+    "exampleSentence": "The corn is yellow.",
+    "emoji": "🌽",
+    "definition": "A yellow vegetable. We make popcorn from it."
+  },
+  {
+    "english": "candy",
+    "turkish": "şeker",
+    "category": "food",
+    "imagePath": "assets/images/food/candy.png",
+    "exampleSentence": "Grandma gives me a candy.",
+    "emoji": "🍬",
+    "definition": "A small sweet. Kids love it."
+  },
+  {
     "english": "red",
     "turkish": "kırmızı",
     "category": "colors",
@@ -511,6 +718,24 @@
     "exampleSentence": "Snow is white.",
     "emoji": "⚪",
     "definition": "The color of snow and milk."
+  },
+  {
+    "english": "pink",
+    "turkish": "pembe",
+    "category": "colors",
+    "imagePath": "assets/images/colors/pink.png",
+    "exampleSentence": "The pig is pink.",
+    "emoji": "🎀",
+    "definition": "The color of a pig."
+  },
+  {
+    "english": "gray",
+    "turkish": "gri",
+    "category": "colors",
+    "imagePath": "assets/images/colors/gray.png",
+    "exampleSentence": "The rock is gray.",
+    "emoji": "🪨",
+    "definition": "The color of a rock and an elephant."
   },
   {
     "english": "one",
@@ -603,6 +828,42 @@
     "definition": "The number 10."
   },
   {
+    "english": "zero",
+    "turkish": "sıfır",
+    "category": "numbers",
+    "imagePath": "assets/images/numbers/zero.png",
+    "exampleSentence": "Zero means nothing.",
+    "emoji": "0️⃣",
+    "definition": "The number 0."
+  },
+  {
+    "english": "eleven",
+    "turkish": "on bir",
+    "category": "numbers",
+    "imagePath": "assets/images/numbers/eleven.png",
+    "exampleSentence": "The clock says eleven.",
+    "emoji": "🕚",
+    "definition": "The number 11."
+  },
+  {
+    "english": "twelve",
+    "turkish": "on iki",
+    "category": "numbers",
+    "imagePath": "assets/images/numbers/twelve.png",
+    "exampleSentence": "A year has twelve months.",
+    "emoji": "🕛",
+    "definition": "The number 12."
+  },
+  {
+    "english": "hundred",
+    "turkish": "yüz (100)",
+    "category": "numbers",
+    "imagePath": "assets/images/numbers/hundred.png",
+    "exampleSentence": "I can count to a hundred.",
+    "emoji": "💯",
+    "definition": "The number 100."
+  },
+  {
     "english": "eye",
     "turkish": "göz",
     "category": "body",
@@ -693,6 +954,60 @@
     "definition": "It is pink and in your mouth. We taste with it."
   },
   {
+    "english": "head",
+    "turkish": "baş",
+    "category": "body",
+    "imagePath": "assets/images/body/head.png",
+    "exampleSentence": "Nod your head.",
+    "emoji": "🙂",
+    "definition": "Your hair is on top of it."
+  },
+  {
+    "english": "hair",
+    "turkish": "saç",
+    "category": "body",
+    "imagePath": "assets/images/body/hair.png",
+    "exampleSentence": "Her hair is long.",
+    "emoji": "💇",
+    "definition": "It grows on your head."
+  },
+  {
+    "english": "face",
+    "turkish": "yüz",
+    "category": "body",
+    "imagePath": "assets/images/body/face.png",
+    "exampleSentence": "My face is clean.",
+    "emoji": "😊",
+    "definition": "Your eyes, nose and mouth are on it."
+  },
+  {
+    "english": "finger",
+    "turkish": "parmak",
+    "category": "body",
+    "imagePath": "assets/images/body/finger.png",
+    "exampleSentence": "I point with my finger.",
+    "emoji": "☝️",
+    "definition": "We have five on each hand."
+  },
+  {
+    "english": "knee",
+    "turkish": "diz",
+    "category": "body",
+    "imagePath": "assets/images/body/knee.png",
+    "exampleSentence": "I hurt my knee.",
+    "emoji": "🧎",
+    "definition": "The middle part of your leg."
+  },
+  {
+    "english": "heart",
+    "turkish": "kalp",
+    "category": "body",
+    "imagePath": "assets/images/body/heart.png",
+    "exampleSentence": "My heart beats fast.",
+    "emoji": "❤️",
+    "definition": "It is in your chest. It beats."
+  },
+  {
     "english": "shirt",
     "turkish": "gömlek",
     "category": "clothes",
@@ -781,6 +1096,60 @@
     "exampleSentence": "Grandpa wears glasses.",
     "emoji": "👓",
     "definition": "We wear them on our eyes to see better."
+  },
+  {
+    "english": "boots",
+    "turkish": "çizme",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/boots.png",
+    "exampleSentence": "I wear boots in the rain.",
+    "emoji": "👢",
+    "definition": "Tall shoes for rain and snow."
+  },
+  {
+    "english": "shorts",
+    "turkish": "şort",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/shorts.png",
+    "exampleSentence": "I wear shorts in summer.",
+    "emoji": "🩳",
+    "definition": "Short pants for hot days."
+  },
+  {
+    "english": "swimsuit",
+    "turkish": "mayo",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/swimsuit.png",
+    "exampleSentence": "My swimsuit is wet.",
+    "emoji": "🩱",
+    "definition": "We wear it to swim."
+  },
+  {
+    "english": "tie",
+    "turkish": "kravat",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/tie.png",
+    "exampleSentence": "Dad wears a tie.",
+    "emoji": "👔",
+    "definition": "Men wear it around the neck with a shirt."
+  },
+  {
+    "english": "crown",
+    "turkish": "taç",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/crown.png",
+    "exampleSentence": "The king has a crown.",
+    "emoji": "👑",
+    "definition": "A king or queen wears it on the head."
+  },
+  {
+    "english": "ring",
+    "turkish": "yüzük",
+    "category": "clothes",
+    "imagePath": "assets/images/clothes/ring.png",
+    "exampleSentence": "Mom has a gold ring.",
+    "emoji": "💍",
+    "definition": "We wear it on a finger."
   },
   {
     "english": "house",
@@ -909,6 +1278,60 @@
     "definition": "We clean the floor with it."
   },
   {
+    "english": "picture",
+    "turkish": "resim",
+    "category": "home",
+    "imagePath": "assets/images/home/picture.png",
+    "exampleSentence": "Look at this picture.",
+    "emoji": "🖼️",
+    "definition": "A painting we hang on the wall."
+  },
+  {
+    "english": "mirror",
+    "turkish": "ayna",
+    "category": "home",
+    "imagePath": "assets/images/home/mirror.png",
+    "exampleSentence": "I look in the mirror.",
+    "emoji": "🪞",
+    "definition": "We see ourselves in it."
+  },
+  {
+    "english": "candle",
+    "turkish": "mum",
+    "category": "home",
+    "imagePath": "assets/images/home/candle.png",
+    "exampleSentence": "The candle is hot.",
+    "emoji": "🕯️",
+    "definition": "It gives light with a small fire."
+  },
+  {
+    "english": "bell",
+    "turkish": "zil",
+    "category": "home",
+    "imagePath": "assets/images/home/bell.png",
+    "exampleSentence": "Ring the bell, please.",
+    "emoji": "🔔",
+    "definition": "It goes ding dong."
+  },
+  {
+    "english": "box",
+    "turkish": "kutu",
+    "category": "home",
+    "imagePath": "assets/images/home/box.png",
+    "exampleSentence": "The toys are in the box.",
+    "emoji": "📦",
+    "definition": "We keep things in it. It has a lid."
+  },
+  {
+    "english": "garden",
+    "turkish": "bahçe",
+    "category": "home",
+    "imagePath": "assets/images/home/garden.png",
+    "exampleSentence": "We play in the garden.",
+    "emoji": "🏡",
+    "definition": "Flowers and trees grow here, next to a house."
+  },
+  {
     "english": "cup",
     "turkish": "fincan",
     "category": "kitchen",
@@ -963,6 +1386,42 @@
     "definition": "We keep water or milk in it."
   },
   {
+    "english": "pan",
+    "turkish": "tava",
+    "category": "kitchen",
+    "imagePath": "assets/images/kitchen/pan.png",
+    "exampleSentence": "Mom cooks eggs in a pan.",
+    "emoji": "🍳",
+    "definition": "We cook food in it on the stove."
+  },
+  {
+    "english": "teapot",
+    "turkish": "çaydanlık",
+    "category": "kitchen",
+    "imagePath": "assets/images/kitchen/teapot.png",
+    "exampleSentence": "The teapot is hot.",
+    "emoji": "🫖",
+    "definition": "We make tea in it."
+  },
+  {
+    "english": "fridge",
+    "turkish": "buzdolabı",
+    "category": "kitchen",
+    "imagePath": "assets/images/kitchen/fridge.png",
+    "exampleSentence": "The milk is in the fridge.",
+    "emoji": "🧊",
+    "definition": "It keeps our food cold."
+  },
+  {
+    "english": "salt",
+    "turkish": "tuz",
+    "category": "kitchen",
+    "imagePath": "assets/images/kitchen/salt.png",
+    "exampleSentence": "Pass the salt, please.",
+    "emoji": "🧂",
+    "definition": "It is white. We put a little on food."
+  },
+  {
     "english": "toothbrush",
     "turkish": "diş fırçası",
     "category": "bathroom",
@@ -1006,6 +1465,33 @@
     "exampleSentence": "I sing in the shower.",
     "emoji": "🚿",
     "definition": "Water comes down on us to get clean."
+  },
+  {
+    "english": "toilet",
+    "turkish": "tuvalet",
+    "category": "bathroom",
+    "imagePath": "assets/images/bathroom/toilet.png",
+    "exampleSentence": "Flush the toilet, please.",
+    "emoji": "🚽",
+    "definition": "We use it and then flush it."
+  },
+  {
+    "english": "sponge",
+    "turkish": "sünger",
+    "category": "bathroom",
+    "imagePath": "assets/images/bathroom/sponge.png",
+    "exampleSentence": "The sponge is yellow.",
+    "emoji": "🧽",
+    "definition": "It is soft and full of holes. We wash with it."
+  },
+  {
+    "english": "cream",
+    "turkish": "krem",
+    "category": "bathroom",
+    "imagePath": "assets/images/bathroom/cream.png",
+    "exampleSentence": "Put cream on your hands.",
+    "emoji": "🧴",
+    "definition": "Soft white stuff for dry skin."
   },
   {
     "english": "book",
@@ -1096,6 +1582,51 @@
     "exampleSentence": "We use a computer at school.",
     "emoji": "💻",
     "definition": "A machine with a screen and keyboard."
+  },
+  {
+    "english": "school",
+    "turkish": "okul",
+    "category": "school",
+    "imagePath": "assets/images/school/school.png",
+    "exampleSentence": "I love my school.",
+    "emoji": "🏫",
+    "definition": "We go there to learn."
+  },
+  {
+    "english": "student",
+    "turkish": "öğrenci",
+    "category": "school",
+    "imagePath": "assets/images/school/student.png",
+    "exampleSentence": "I am a good student.",
+    "emoji": "🧑‍🎓",
+    "definition": "A child who learns at school."
+  },
+  {
+    "english": "pen",
+    "turkish": "tükenmez kalem",
+    "category": "school",
+    "imagePath": "assets/images/school/pen.png",
+    "exampleSentence": "Write with a blue pen.",
+    "emoji": "🖊️",
+    "definition": "We write with ink using it."
+  },
+  {
+    "english": "map",
+    "turkish": "harita",
+    "category": "school",
+    "imagePath": "assets/images/school/map.png",
+    "exampleSentence": "Look at the map.",
+    "emoji": "🗺️",
+    "definition": "A drawing that shows places."
+  },
+  {
+    "english": "globe",
+    "turkish": "küre",
+    "category": "school",
+    "imagePath": "assets/images/school/globe.png",
+    "exampleSentence": "Find Turkey on the globe.",
+    "emoji": "🌍",
+    "definition": "A round map of the world."
   },
   {
     "english": "car",
@@ -1195,6 +1726,60 @@
     "exampleSentence": "The rocket goes to space.",
     "emoji": "🚀",
     "definition": "It flies to the moon and stars."
+  },
+  {
+    "english": "motorcycle",
+    "turkish": "motosiklet",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/motorcycle.png",
+    "exampleSentence": "The motorcycle is fast.",
+    "emoji": "🏍️",
+    "definition": "It has two wheels and a motor."
+  },
+  {
+    "english": "tractor",
+    "turkish": "traktör",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/tractor.png",
+    "exampleSentence": "The tractor is on the farm.",
+    "emoji": "🚜",
+    "definition": "A farm vehicle with big wheels."
+  },
+  {
+    "english": "ambulance",
+    "turkish": "ambulans",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/ambulance.png",
+    "exampleSentence": "The ambulance is very fast.",
+    "emoji": "🚑",
+    "definition": "It takes sick people to the hospital."
+  },
+  {
+    "english": "fire truck",
+    "turkish": "itfaiye aracı",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/fire_truck.png",
+    "exampleSentence": "The fire truck is red.",
+    "emoji": "🚒",
+    "definition": "It brings firefighters to put out fires."
+  },
+  {
+    "english": "police car",
+    "turkish": "polis arabası",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/police_car.png",
+    "exampleSentence": "The police car is loud.",
+    "emoji": "🚓",
+    "definition": "Police officers drive it."
+  },
+  {
+    "english": "scooter",
+    "turkish": "scooter",
+    "category": "vehicles",
+    "imagePath": "assets/images/vehicles/scooter.png",
+    "exampleSentence": "I ride my scooter.",
+    "emoji": "🛴",
+    "definition": "A toy with two wheels. You push with one foot."
   },
   {
     "english": "sun",
@@ -1305,6 +1890,60 @@
     "definition": "A very big and high hill."
   },
   {
+    "english": "sky",
+    "turkish": "gökyüzü",
+    "category": "nature",
+    "imagePath": "assets/images/nature/sky.png",
+    "exampleSentence": "Birds fly in the sky.",
+    "emoji": "🌤️",
+    "definition": "It is above us. Clouds are in it."
+  },
+  {
+    "english": "river",
+    "turkish": "nehir",
+    "category": "nature",
+    "imagePath": "assets/images/nature/river.png",
+    "exampleSentence": "The river is long.",
+    "emoji": "🏞️",
+    "definition": "Water that flows to the sea."
+  },
+  {
+    "english": "wind",
+    "turkish": "rüzgâr",
+    "category": "nature",
+    "imagePath": "assets/images/nature/wind.png",
+    "exampleSentence": "The wind is strong.",
+    "emoji": "🌬️",
+    "definition": "Moving air. It makes kites fly."
+  },
+  {
+    "english": "beach",
+    "turkish": "plaj",
+    "category": "nature",
+    "imagePath": "assets/images/nature/beach.png",
+    "exampleSentence": "We play on the beach.",
+    "emoji": "🏖️",
+    "definition": "Sand next to the sea."
+  },
+  {
+    "english": "grass",
+    "turkish": "çimen",
+    "category": "nature",
+    "imagePath": "assets/images/nature/grass.png",
+    "exampleSentence": "We sit on the grass.",
+    "emoji": "🌱",
+    "definition": "Green plants that cover the ground."
+  },
+  {
+    "english": "island",
+    "turkish": "ada",
+    "category": "nature",
+    "imagePath": "assets/images/nature/island.png",
+    "exampleSentence": "We visit an island.",
+    "emoji": "🏝️",
+    "definition": "Land with water all around it."
+  },
+  {
     "english": "mother",
     "turkish": "anne",
     "category": "family",
@@ -1377,6 +2016,42 @@
     "definition": "Mom, dad, brothers and sisters together."
   },
   {
+    "english": "uncle",
+    "turkish": "amca / dayı",
+    "category": "family",
+    "imagePath": "assets/images/family/uncle.png",
+    "exampleSentence": "My uncle is funny.",
+    "emoji": "👨‍🦱",
+    "definition": "Your mom's or dad's brother."
+  },
+  {
+    "english": "aunt",
+    "turkish": "teyze / hala",
+    "category": "family",
+    "imagePath": "assets/images/family/aunt.png",
+    "exampleSentence": "My aunt bakes cakes.",
+    "emoji": "👩‍🦰",
+    "definition": "Your mom's or dad's sister."
+  },
+  {
+    "english": "cousin",
+    "turkish": "kuzen",
+    "category": "family",
+    "imagePath": "assets/images/family/cousin.png",
+    "exampleSentence": "My cousin is my friend.",
+    "emoji": "🧒",
+    "definition": "Your aunt's or uncle's child."
+  },
+  {
+    "english": "friend",
+    "turkish": "arkadaş",
+    "category": "family",
+    "imagePath": "assets/images/family/friend.png",
+    "exampleSentence": "My friend is kind.",
+    "emoji": "🧑‍🤝‍🧑",
+    "definition": "A person you like to play with."
+  },
+  {
     "english": "ball",
     "turkish": "top",
     "category": "toys",
@@ -1447,5 +2122,50 @@
     "exampleSentence": "My doll has long hair.",
     "emoji": "🪆",
     "definition": "A toy that looks like a little person."
+  },
+  {
+    "english": "blocks",
+    "turkish": "bloklar",
+    "category": "toys",
+    "imagePath": "assets/images/toys/blocks.png",
+    "exampleSentence": "I build with blocks.",
+    "emoji": "🧱",
+    "definition": "Toys we stack to build towers."
+  },
+  {
+    "english": "yo-yo",
+    "turkish": "yoyo",
+    "category": "toys",
+    "imagePath": "assets/images/toys/yo-yo.png",
+    "exampleSentence": "My yo-yo goes up and down.",
+    "emoji": "🪀",
+    "definition": "A round toy on a string."
+  },
+  {
+    "english": "game",
+    "turkish": "oyun",
+    "category": "toys",
+    "imagePath": "assets/images/toys/game.png",
+    "exampleSentence": "Let's play a game!",
+    "emoji": "🎮",
+    "definition": "Something fun we play with rules."
+  },
+  {
+    "english": "dice",
+    "turkish": "zar",
+    "category": "toys",
+    "imagePath": "assets/images/toys/dice.png",
+    "exampleSentence": "Roll the dice!",
+    "emoji": "🎲",
+    "definition": "A small cube with dots on it."
+  },
+  {
+    "english": "skateboard",
+    "turkish": "kaykay",
+    "category": "toys",
+    "imagePath": "assets/images/toys/skateboard.png",
+    "exampleSentence": "I ride my skateboard.",
+    "emoji": "🛹",
+    "definition": "A board with four wheels."
   }
 ]
