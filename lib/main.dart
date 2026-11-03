@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/sentence_screen.dart';
 import 'screens/word_card_screen.dart';
 
 void main() {
@@ -83,7 +84,12 @@ class HomeScreen extends StatelessWidget {
                 _MenuButton(
                   label: 'Cümleler',
                   icon: Icons.chat_bubble,
-                  onPressed: () => _showComingSoon(context),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) =>
+                          const SentenceScreen(),
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 24),
                 _MenuButton(

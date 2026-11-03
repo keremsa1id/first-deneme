@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import '../models/word.dart';
 import '../services/tts_service.dart';
 import '../services/word_repository.dart';
+import '../widgets/card_colors.dart';
+import '../widgets/message_view.dart';
+import '../widgets/nav_button.dart';
+import '../widgets/word_picture.dart';
 
 /// Kelimeleri tek tek büyük kartlar halinde gösteren ekran.
 ///
@@ -114,7 +118,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
               final String message = error is WordRepositoryException
                   ? error.message
                   : 'Kelimeler yüklenemedi.';
-              return _MessageView(
+              return MessageView(
                 icon: Icons.sentiment_dissatisfied_rounded,
                 message: message,
                 buttonLabel: 'Tekrar dene',
@@ -124,7 +128,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
 
             final List<Word> words = snapshot.data ?? const <Word>[];
             if (words.isEmpty) {
-              return const _MessageView(
+              return const MessageView(
                 icon: Icons.inbox_rounded,
                 message: 'Henüz kelime yok.',
               );
@@ -177,7 +181,7 @@ class _WordCardScreenState extends State<WordCardScreen> {
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
           child: Row(
             children: [
-              _NavButton(
+              NavButton(
                 icon: Icons.arrow_back_rounded,
                 tooltip: 'Önceki',
                 onPressed: isFirst ? null : _goToPrevious,
@@ -192,13 +196,13 @@ class _WordCardScreenState extends State<WordCardScreen> {
                 ),
               ),
               if (isLast)
-                _NavButton(
+                NavButton(
                   icon: Icons.replay_rounded,
                   tooltip: 'Başa dön',
                   onPressed: words.length > 1 ? _goToFirst : null,
                 )
               else
-                _NavButton(
+                NavButton(
                   icon: Icons.arrow_forward_rounded,
                   tooltip: 'Sonraki',
                   onPressed: _goToNext,
@@ -220,7 +224,7 @@ class _WordCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final Color color = _colorFor(word.english);
+    final Color color = colorFor(word.english);
 
     // Karta dokununca İngilizce kelime sesli okunur.
     return GestureDetector(
@@ -235,7 +239,7 @@ class _WordCard extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            Expanded(child: _WordPicture(word: word, color: color)),
+            Expanded(child: WordPicture(word: word, color: color)),
             const SizedBox(height: 24),
             FittedBox(
               fit: BoxFit.scaleDown,
@@ -262,188 +266,6 @@ class _WordCard extends StatelessWidget {
             ),
             // TODO: Kelimeyi sesli okumak için buraya büyük bir ses butonu
             // eklenecek (flutter_tts, sonraki adım).
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Kelimenin görseli. Sırasıyla: imagePath, emoji, renkli baş harf.
-class _WordPicture extends StatelessWidget {
-  const _WordPicture({required this.word, required this.color});
-
-  final Word word;
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    final Widget fallback = _buildFallback();
-
-    if (word.imagePath.trim().isEmpty) {
-      return fallback;
-    }
-
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(24),
-      child: Image.asset(
-        word.imagePath,
-        fit: BoxFit.contain,
-        // Görsel dosyası henüz eklenmediyse emoji/baş harf gösterilir.
-        errorBuilder: (BuildContext context, Object error, StackTrace? _) =>
-            fallback,
-      ),
-    );
-  }
-
-  Widget _buildFallback() {
-    final String? emoji = word.emoji;
-    if (emoji != null) {
-      return Center(
-        child: FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(emoji, style: const TextStyle(fontSize: 160)),
-        ),
-      );
-    }
-
-    final String letter =
-        word.english.isEmpty ? '?' : word.english[0].toUpperCase();
-    return Center(
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(40),
-          ),
-          alignment: Alignment.center,
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(
-                letter,
-                style: const TextStyle(
-                  fontSize: 160,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Kartlar için canlı ama yorucu olmayan renkler.
-const List<Color> _cardColors = <Color>[
-  Color(0xFFFF8A65), // turuncu
-  Color(0xFF4FC3F7), // mavi
-  Color(0xFF81C784), // yeşil
-  Color(0xFFBA68C8), // mor
-  Color(0xFFFFB74D), // sarı-turuncu
-  Color(0xFFF06292), // pembe
-  Color(0xFF4DB6AC), // turkuaz
-];
-
-/// Aynı kelime her zaman aynı rengi alsın diye harf kodlarından renk seçer.
-Color _colorFor(String text) {
-  int sum = 0;
-  for (final int unit in text.codeUnits) {
-    sum += unit;
-  }
-  return _cardColors[sum % _cardColors.length];
-}
-
-/// Alt çubuktaki büyük, yalnızca simgeli geçiş butonu.
-/// [onPressed] null ise buton soluk ve pasif görünür.
-class _NavButton extends StatelessWidget {
-  const _NavButton({
-    required this.icon,
-    required this.tooltip,
-    required this.onPressed,
-  });
-
-  final IconData icon;
-  final String tooltip;
-  final VoidCallback? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Tooltip(
-      message: tooltip,
-      child: SizedBox(
-        width: 96,
-        height: 72,
-        child: FilledButton(
-          onPressed: onPressed,
-          style: FilledButton.styleFrom(
-            padding: EdgeInsets.zero,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24),
-            ),
-          ),
-          child: Icon(icon, size: 44),
-        ),
-      ),
-    );
-  }
-}
-
-/// Yükleme hatası veya boş liste durumunda gösterilen sade mesaj.
-class _MessageView extends StatelessWidget {
-  const _MessageView({
-    required this.icon,
-    required this.message,
-    this.buttonLabel,
-    this.onPressed,
-  });
-
-  final IconData icon;
-  final String message;
-  final String? buttonLabel;
-  final VoidCallback? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-    final String? label = buttonLabel;
-
-    return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Icon(icon, size: 120, color: theme.colorScheme.primary),
-            const SizedBox(height: 24),
-            Text(
-              message,
-              textAlign: TextAlign.center,
-              style: theme.textTheme.headlineMedium,
-            ),
-            if (label != null && onPressed != null) ...[
-              const SizedBox(height: 32),
-              FilledButton.icon(
-                onPressed: onPressed,
-                icon: const Icon(Icons.refresh_rounded, size: 36),
-                label: Text(label),
-                style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(72),
-                  textStyle: const TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                ),
-              ),
-            ],
           ],
         ),
       ),
