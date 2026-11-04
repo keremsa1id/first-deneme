@@ -1,0 +1,48 @@
+name: Build macOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    # macOS uygulaması yalnızca Xcode olan bir Mac'te derlenebilir.
+    runs-on: macos-latest
+
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      - name: Flutter kur
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: macOS platform dosyalarını oluştur
+        run: flutter create . --platforms=macos --project-name kelime_macerasi
+
+      - name: Paketleri indir
+        run: flutter pub get
+
+      - name: Kodu analiz et
+        run: flutter analyze
+
+      - name: Release macOS uygulaması derle
+        run: flutter build macos --release
+
+      - name: Uygulamayı zip'le
+        # ditto, .app paketinin izinlerini ve yapısını korur.
+        run: |
+          cd build/macos/Build/Products/Release
+          APP=$(ls -d *.app | head -1)
+          ditto -c -k --keepParent "$APP" "$GITHUB_WORKSPACE/kelime-macerasi-macos.zip"
+
+      - name: Uygulamayı yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: kelime-macerasi-macos
+          path: kelime-macerasi-macos.zip

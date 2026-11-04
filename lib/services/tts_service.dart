@@ -20,7 +20,7 @@ class TtsService {
 
   /// Çocuklar için yavaş konuşma hızı.
   ///
-  /// flutter_tts Android ve iOS'ta 0.5'i normal hız kabul eder,
+  /// flutter_tts Android, iOS ve macOS'ta 0.5'i normal hız kabul eder,
   /// web'de ise normal hız 1.0'dır.
   static double get speechRate => kIsWeb ? 0.7 : 0.35;
 
