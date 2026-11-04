@@ -35,6 +35,19 @@ class KelimeApp extends StatelessWidget {
           labelLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
+      // Mac gibi geniş ekranlarda içerik telefon genişliğinde ortalanır;
+      // telefonda ekran zaten dar olduğu için bir şey değişmez.
+      builder: (BuildContext context, Widget? child) {
+        return ColoredBox(
+          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 700),
+              child: child,
+            ),
+          ),
+        );
+      },
       home: const HomeScreen(),
     );
   }
